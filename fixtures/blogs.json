@@ -1,0 +1,80 @@
+[
+{
+    "model": "blog.blog",
+    "pk": 1,
+    "fields": {
+        "title": "Сдача крови",
+        "title_ru": "Сдача крови",
+        "title_en": "Blood Donation",
+        "content": "🩸 Если вы сдаете анализы крови\r\nГлавная задача — исключить факторы, которые могут исказить показатели.\r\nГолод. \r\nКровь сдают строго натощак в утренние часы.\r\nПауза. \r\nМежду последним приемом пищи и процедурой должно пройти 8–12 часов.\r\nВода. \r\nУтром можно и нужно пить только чистую негазированную воду.\r\nТабу за 24 часа. \r\nПолностью исключите алкоголь, жирную и жареную пищу.\r\nСпорт. Отмените тяжелые тренировки за сутки до теста.\r\nУтро. \r\nНе курите минимум за 1 час до взятия крови.\r\nЛекарства. \r\nОбсудите с врачом отмену препаратов за несколько дней до анализа.\r\nПокой. \r\nПосидите спокойно 10–15 минут перед входом в процедурный кабинет.",
+        "content_ru": "🩸 Если вы сдаете анализы крови\r\nГлавная задача — исключить факторы, которые могут исказить показатели.\r\nГолод. \r\nКровь сдают строго натощак в утренние часы.\r\nПауза. \r\nМежду последним приемом пищи и процедурой должно пройти 8–12 часов.\r\nВода. \r\nУтром можно и нужно пить только чистую негазированную воду.\r\nТабу за 24 часа. \r\nПолностью исключите алкоголь, жирную и жареную пищу.\r\nСпорт. Отмените тяжелые тренировки за сутки до теста.\r\nУтро. \r\nНе курите минимум за 1 час до взятия крови.\r\nЛекарства. \r\nОбсудите с врачом отмену препаратов за несколько дней до анализа.\r\nПокой. \r\nПосидите спокойно 10–15 минут перед входом в процедурный кабинет.",
+        "content_en": "🩸 If you’re having blood tests\r\nThe main goal is to rule out factors that could skew the results.\r\nFasting. \r\nBlood samples must be taken strictly on an empty stomach in the morning.\r\nWaiting period. \r\nThere should be an 8–12-hour gap between your last meal and the procedure.\r\nWater. \r\nIn the morning, you can and should drink only plain, non-carbonated water.\r\nThings to Avoid for 24 Hours. \r\nCompletely avoid alcohol, fatty foods, and fried foods.\r\nExercise. Avoid strenuous workouts the day before the test.\r\nMorning. \r\nDo not smoke for at least 1 hour before the blood draw.\r\nMedications. \r\nDiscuss with your doctor whether to stop taking any medications a few days before the test.\r\nRest. \r\nSit quietly for 10–15 minutes before entering the procedure room.",
+        "image": "blog/blood.avif"
+    }
+},
+{
+    "model": "blog.blog",
+    "pk": 2,
+    "fields": {
+        "title": "Донорство",
+        "title_ru": "Донорство",
+        "title_en": "Donation",
+        "content": "❤️ Если Вы сдаете кровь как донор\r\nДля донации важно не морить себя голодом, а соблюдать специальную диету.\r\nУжин накануне. \r\nИсключите жирное, жареное, острое, копченое.\r\nЗапретные продукты. \r\nЗа сутки откажитесь от молока, яиц, масла, сыра, орехов, фиников.\r\nЗавтрак донора. \r\nСдавать кровь голодным нельзя. Скушайте кашу на воде, сушки или сладкий чай.\r\nАлкоголь. \r\nСтрого запрещено пить спиртное за 48 часов до процедуры.\r\nЛекарства. \r\nНе принимайте анальгетики и аспирин за 72 часа, антибиотики — за 14 дней.\r\nКурение. \r\nВоздержитесь от сигарет (включая вейпы) минимум за 1 час до сдачи.\r\nСон. \r\nОбязательно выспитесь, не приходите на донацию после ночной смены.",
+        "content_ru": "❤️ Если Вы сдаете кровь как донор\r\nДля донации важно не морить себя голодом, а соблюдать специальную диету.\r\nУжин накануне. \r\nИсключите жирное, жареное, острое, копченое.\r\nЗапретные продукты. \r\nЗа сутки откажитесь от молока, яиц, масла, сыра, орехов, фиников.\r\nЗавтрак донора. \r\nСдавать кровь голодным нельзя. Скушайте кашу на воде, сушки или сладкий чай.\r\nАлкоголь. \r\nСтрого запрещено пить спиртное за 48 часов до процедуры.\r\nЛекарства. \r\nНе принимайте анальгетики и аспирин за 72 часа, антибиотики — за 14 дней.\r\nКурение. \r\nВоздержитесь от сигарет (включая вейпы) минимум за 1 час до сдачи.\r\nСон. \r\nОбязательно выспитесь, не приходите на донацию после ночной смены.",
+        "content_en": "❤️ If you’re donating blood\r\nIt’s important not to starve yourself before donating, but to follow a special diet.\r\nDinner the night before. \r\nAvoid fatty, fried, spicy, and smoked foods.\r\nFoods to avoid. \r\nFor 24 hours beforehand, avoid milk, eggs, butter, cheese, nuts, and dates.\r\nA donor’s breakfast. \r\nYou must not donate blood on an empty stomach. Eat porridge made with water, crackers, or sweet tea.\r\nAlcohol. \r\nIt is strictly forbidden to drink alcohol within 48 hours before the procedure.\r\nMedications. \r\nDo not take pain relievers or aspirin for 72 hours, or antibiotics for 14 days.\r\nSmoking. \r\nRefrain from smoking (including vaping) for at least 1 hour before donating.\r\nSleep. \r\nBe sure to get a good night’s sleep; do not come to donate after a night shift.",
+        "image": "blog/donor.jpeg"
+    }
+},
+{
+    "model": "blog.blog",
+    "pk": 4,
+    "fields": {
+        "title": "Ферритин — это главный показатель запасов железа ⚛️ Фер",
+        "title_ru": "Ферритин — это главный показатель запасов железа ⚛️ Фер",
+        "title_en": "Ferritin is the main indicator of iron stores ⚛️ Ferrit",
+        "content": "Зачем нужен: Оценивает реальные резервы железа. Если он низкий — у вас дефицит («пустое депо»), даже если гемоглобин в норме.\r\nСимптомы нехватки: Постоянная усталость, выпадение волос, ломкость ногтей, бледность.\r\nНюанс: Ферритин — это белок острой фазы воспаления. При простуде или ковиде он ложно повышается, поэтому сдавать его нужно строго в здоровом состоянии.",
+        "content_ru": "Зачем нужен: Оценивает реальные резервы железа. Если он низкий — у вас дефицит («пустое депо»), даже если гемоглобин в норме.\r\nСимптомы нехватки: Постоянная усталость, выпадение волос, ломкость ногтей, бледность.\r\nНюанс: Ферритин — это белок острой фазы воспаления. При простуде или ковиде он ложно повышается, поэтому сдавать его нужно строго в здоровом состоянии.",
+        "content_en": "Why it’s needed: It assesses your actual iron stores. If the level is low, you have an iron deficiency (“empty depot”), even if your hemoglobin is normal.\r\nSymptoms of deficiency: Constant fatigue, hair loss, brittle nails, and paleness.\r\nNote: Ferritin is an acute-phase inflammatory protein. It can show falsely elevated levels during a cold or COVID-19, so you should have this test done only when you are in good health.",
+        "image": "blog/analiz.jpg"
+    }
+},
+{
+    "model": "blog.blog",
+    "pk": 5,
+    "fields": {
+        "title": "💊 Важные анализы на витамины",
+        "title_ru": "💊 Важные анализы на витамины",
+        "title_en": "💊 Important Vitamin Tests",
+        "content": "Здоровье человека, его иммунитет и уровень энергии чаще всего зависят от четырех основных нутриентов.\r\n\r\nВитамин D (25-OH гидроксивитамин D)\r\nРоль: Регулирует усвоение кальция, отвечает за иммунитет, плотность костей и работу гормонов.\r\nКому сдавать: Всем, кто мало бывает на солнце, чувствует слабость в мышцах или часто болеет.\r\n\r\nВитамин B12 (Цианокобаламин)\r\nРоль: Участвует в кроветворении и защищает нервную систему от разрушения.Кому сдавать: Вегетарианцам (в растительной пище его нет), пожилым людям и при онемении конечностей.\r\n\r\nВитамин B9 (Фолиевая кислота)\r\nРоль: Отвечает за деление клеток, рост тканей и синтез ДНК.\r\nКому сдавать: Женщинам при планировании беременности (критически важен для плода) и при анемии.\r\n\r\nВитамин B6 (Пиридоксин)\r\nРоль: Необходим для усвоения магния, нормальной работы мозга и синтеза серотонина.\r\nКому сдавать: При частых стрессах, бессоннице и проблемах с кожей (дерматитах).",
+        "content_ru": "Здоровье человека, его иммунитет и уровень энергии чаще всего зависят от четырех основных нутриентов.\r\n\r\nВитамин D (25-OH гидроксивитамин D)\r\nРоль: Регулирует усвоение кальция, отвечает за иммунитет, плотность костей и работу гормонов.\r\nКому сдавать: Всем, кто мало бывает на солнце, чувствует слабость в мышцах или часто болеет.\r\n\r\nВитамин B12 (Цианокобаламин)\r\nРоль: Участвует в кроветворении и защищает нервную систему от разрушения.Кому сдавать: Вегетарианцам (в растительной пище его нет), пожилым людям и при онемении конечностей.\r\n\r\nВитамин B9 (Фолиевая кислота)\r\nРоль: Отвечает за деление клеток, рост тканей и синтез ДНК.\r\nКому сдавать: Женщинам при планировании беременности (критически важен для плода) и при анемии.\r\n\r\nВитамин B6 (Пиридоксин)\r\nРоль: Необходим для усвоения магния, нормальной работы мозга и синтеза серотонина.\r\nКому сдавать: При частых стрессах, бессоннице и проблемах с кожей (дерматитах).",
+        "content_en": "A person’s health, immune system, and energy levels most often depend on four key nutrients.\r\n\r\nVitamin D (25-OH hydroxyvitamin D)\r\nRole: Regulates calcium absorption and supports the immune system, bone density, and hormone function.\r\nWho should get tested: Anyone who spends little time in the sun, experiences muscle weakness, or gets sick often.\r\n\r\nVitamin B12 (Cyanocobalamin)\r\nRole: Plays a role in blood formation and protects the nervous system from damage.\r\nWho should get tested: Vegetarians (it is not found in plant-based foods), older adults, and those experiencing numbness in the limbs.\r\n\r\nVitamin B9 (Folic Acid)\r\nRole: Responsible for cell division, tissue growth, and DNA synthesis.\r\nWho should get tested: Women planning a pregnancy (it is critically important for the fetus) and those with anemia.\r\n\r\nVitamin B6 (Pyridoxine)\r\nRole: Essential for magnesium absorption, normal brain function, and serotonin synthesis.\r\nWho should take it: People experiencing frequent stress, insomnia, and skin problems (dermatitis).",
+        "image": "blog/analiz2.jpg"
+    }
+},
+{
+    "model": "blog.blog",
+    "pk": 6,
+    "fields": {
+        "title": "🩸 Липидный профиль: почему одного «холестерина» мало?",
+        "title_ru": "🩸 Липидный профиль: почему одного «холестерина» мало?",
+        "title_en": "🩸 Lipid Profile: Why Is “Cholesterol” Alone Not Enough",
+        "content": "Когда люди хотят проверить сосуды и сердце, они обычно просят назначить им «анализ на холестерин». Но сам по себе общий холестерин — это малоинформативная цифра. Он может быть повышен, но человек при этом абсолютно здоров. И наоборот: нормальный общий холестерин иногда маскирует высокий риск инфаркта.Чтобы увидеть реальную картину, нужно сдавать липидный профиль (липидограмму).\r\n🧪 Что входит в липидный профиль?Липидограмма раскладывает кровь на «фракции» (компоненты). В стандартный комплекс входят 4 главных показателя:Общий холестерин — общая сумма всего холестерина в крови.ЛПВП (Липопротеины высокой плотности) — «хороший» холестерин. Он работает как дворник: собирает излишки жира со стенок сосудов и уносит их в печень для утилизации. Чем его больше, тем лучше.ЛПНП (Липопротеины низкой плотности) — «плохой» холестерин. Именно он оседает на стенках артерий, образуя опасные атеросклеротические бляшки. Его уровень нужно строго контролировать.Триглицериды — главные источники энергии, жиры, которые мы получаем с пищей. Их избыток — это первый маркер метаболического синдрома и лишнего веса.",
+        "content_ru": "Когда люди хотят проверить сосуды и сердце, они обычно просят назначить им «анализ на холестерин». Но сам по себе общий холестерин — это малоинформативная цифра. Он может быть повышен, но человек при этом абсолютно здоров. И наоборот: нормальный общий холестерин иногда маскирует высокий риск инфаркта.Чтобы увидеть реальную картину, нужно сдавать липидный профиль (липидограмму).\r\n🧪 Что входит в липидный профиль?Липидограмма раскладывает кровь на «фракции» (компоненты). В стандартный комплекс входят 4 главных показателя:Общий холестерин — общая сумма всего холестерина в крови.ЛПВП (Липопротеины высокой плотности) — «хороший» холестерин. Он работает как дворник: собирает излишки жира со стенок сосудов и уносит их в печень для утилизации. Чем его больше, тем лучше.ЛПНП (Липопротеины низкой плотности) — «плохой» холестерин. Именно он оседает на стенках артерий, образуя опасные атеросклеротические бляшки. Его уровень нужно строго контролировать.Триглицериды — главные источники энергии, жиры, которые мы получаем с пищей. Их избыток — это первый маркер метаболического синдрома и лишнего веса.",
+        "content_en": "When people want to check their blood vessels and heart, they usually ask for a “cholesterol test.” But total cholesterol on its own is not very informative. It can be elevated, yet the person may be perfectly healthy. And conversely, normal total cholesterol sometimes masks a high risk of a heart attack. To get the full picture, you need to have a lipid profile (lipidogram) done.\r\n🧪 What does a lipid profile include? A lipidogram breaks down blood into “fractions” (components). The standard panel includes four main indicators: Total cholesterol—the total amount of cholesterol in the blood. HDL (High-Density Lipoproteins) — “good” cholesterol. It acts like a janitor: it collects excess fat from the walls of blood vessels and carries it to the liver for disposal. The higher the level, the better. LDL (Low-Density Lipoproteins) — “bad” cholesterol. It is this type of cholesterol that builds up on the walls of the arteries, forming dangerous atherosclerotic plaques. Its levels must be strictly controlled. Triglycerides are the main sources of energy—the fats we get from food. An excess of them is the first indicator of metabolic syndrome and excess weight.\r\n\r\nTranslated with DeepL.com (free version)",
+        "image": "blog/analiz3.jpg"
+    }
+},
+{
+    "model": "blog.blog",
+    "pk": 7,
+    "fields": {
+        "title": "Вода — основа вашего здоровья: почему гидратация нужна",
+        "title_ru": "Вода — основа вашего здоровья: почему гидратация нужна",
+        "title_en": "Water Is the Foundation of Your Health: Why Hydration I",
+        "content": "💧Зачем организму вода?\r\nПостоянная поддержка водного баланса (гидратация) необходима для нормальной работы всех систем:\r\n\r\nТранспортная функция: Вода доставляет кислород, питательные вещества и витамины к каждой клетке.\r\n\r\nОчищение: Почки используют воду для фильтрации крови и выведения продуктов метаболизма (токсинов).\r\n\r\nРабота мозга: Даже при незначительном обезвоживании снижается концентрация внимания, ухудшается память и возникают головные боли.\r\n\r\nСуставы и мышцы: Вода выступает «смазкой» для суставов и помогает мышцам эффективно сокращаться, предотвращая судороги.\r\n\r\nЗдоровье кожи: Достаточное количество влаги помогает сохранять эластичность кожи и здоровый цвет лица.",
+        "content_ru": "💧Зачем организму вода?\r\nПостоянная поддержка водного баланса (гидратация) необходима для нормальной работы всех систем:\r\n\r\nТранспортная функция: Вода доставляет кислород, питательные вещества и витамины к каждой клетке.\r\n\r\nОчищение: Почки используют воду для фильтрации крови и выведения продуктов метаболизма (токсинов).\r\n\r\nРабота мозга: Даже при незначительном обезвоживании снижается концентрация внимания, ухудшается память и возникают головные боли.\r\n\r\nСуставы и мышцы: Вода выступает «смазкой» для суставов и помогает мышцам эффективно сокращаться, предотвращая судороги.\r\n\r\nЗдоровье кожи: Достаточное количество влаги помогает сохранять эластичность кожи и здоровый цвет лица.",
+        "content_en": "💧Why does the body need water?\r\nMaintaining a constant water balance (hydration) is essential for the normal functioning of all body systems:\r\n\r\nTransport function: Water delivers oxygen, nutrients, and vitamins to every cell.\r\n\r\nDetoxification: The kidneys use water to filter the blood and eliminate metabolic waste products (toxins).\r\n\r\nBrain function: Even mild dehydration can reduce concentration, impair memory, and cause headaches.\r\n\r\nJoints and Muscles: Water acts as a “lubricant” for the joints and helps muscles contract effectively, preventing cramps.\r\n\r\nSkin Health: Adequate hydration helps maintain the skin’s elasticity and a healthy complexion.",
+        "image": "blog/H2O.webp"
+    }
+}
+]

@@ -1,0 +1,100 @@
+/* Кнопка открытия */
+#chat-toggle {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9999999 !important;
+
+    /* Увеличиваю размеры для комфортного размещения контента */
+    width: auto !important; /* Ширина подстроится под контент */
+    min-width: 160px !important;
+    height: 55px !important;
+    padding: 0 15px !important; /* Отступы внутри кнопки */
+
+    border-radius: 30px !important;
+    background: #007bff !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+
+    /* Flexbox для выравнивания */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important; /* Пробел между роботом и текстом */
+
+    font-family: sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+/* Окно чата */
+#chat-box {
+    position: fixed !important;
+    bottom: 90px !important;
+    right: 20px !important;
+    width: 350px !important;
+    height: 500px !important;
+    background: #ffffff !important;
+    border-radius: 16px !important; /* Скругленные углы */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important; /* Мягкая тень */
+    border: 1px solid #e0e0e0 !important; /* Тонкая серая рамка */
+    z-index: 9999999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+
+    /* Анимация */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(20px) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#chat-box.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+#chat-box {
+    display: flex !important;
+    flex-direction: column !important; /* Элементы идут друг под другом */
+}
+
+.chat-header {
+    padding: 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+#chat-messages {
+    flex-grow: 1 !important; /* Занимает всё свободное место */
+    overflow-y: auto !important;
+    padding: 10px;
+}
+
+.chat-input-area {
+    display: flex !important;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    gap: 5px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#send-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}

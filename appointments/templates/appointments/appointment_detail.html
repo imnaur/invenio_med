@@ -1,0 +1,67 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Детали записи" %}{% endblock %}
+
+{% block content %}
+
+<h2>{% trans "О записи" %}</h2>
+<div class="container mt-5">
+    {% if user.is_authenticated and not user.is_staff and not user.is_superuser and not user.is_doctor %}
+    <h5 style="color: #0000bf;">{% trans "Изменения в бронировании принимаются через форму заявки в разделе «Контакты»." %}</h5>
+    <h5 style="color: #0000bf;">{% trans "Отмена или перенос записи после подтверждения возможны не позднее чем за 24 часа до назначенного времени." %}</h5>
+    <h6 style="color: #0000bf;">{% trans "За изменения или перенос позднее чем 24 часа до записи взимается компенсация в размере половины запланированной услуги*." %}</h6>
+    <h6 style="color: #0000bf;">{% trans "Пример заявки на изменение: пожалуйста удалите/перенесите мою запись (дата, время, услуга)*" %}</h6>
+    {% endif %}
+    <div class="row text-center mt-5">
+        <div class="col-md-4 col-sm-6">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">{{ appointment.service.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="mt-3 mb-2 text-start m-3">
+                        {{ appointment.service.description|truncatechars:100 }}
+                    </p>
+                    <p class="text-start m-3">
+                        {{ appointment.date }}
+                    </p>
+                    <p class="text-start m-3">
+                        {{ appointment.get_status_display }}
+                    </p>
+                    {% if appointment.get_status_display == 'Завершена'%}
+                        {% if appointment.diagnostic_result %}
+                        <p class="text-start m-3">
+                            {{ appointment.diagnostic_result.result_text }}
+                        </p>
+                        <a href="{% url 'appointments:result_detail' appointment.diagnostic_result.pk %}">{% trans "К результатам" %}</a>
+                    {% else %}
+                        <p class="text-start m-3 text-muted">{% trans "Результат диагностики еще не добавлен." %}</p>
+                    {% endif %}
+                    {% endif %}
+
+                    {% if user.is_staff or user.is_superuser %}
+                    <div class="mt-3">
+                        <a href="{% url 'appointments:appointment_update' appointment.pk %}"
+                           class="btn btn-warning btn-sm">{% trans "Редактировать" %}</a>
+                        <a href="{% url 'appointments:appointment_delete' appointment.pk %}"
+                           class="btn btn-danger btn-sm">{% trans "Удалить" %}</a>
+                    </div>
+                    {% endif %}
+                    {% if user.is_authenticated and not user.is_staff and not user.is_superuser and not user.is_doctor %}
+                    {% if appointment.get_status_display != 'Завершена' and appointment.get_status_display != 'Closed' %}
+                    <a class="btn btn-primary mt-1" href="{% url 'pages:page_detail' page_slug %}" role="button">{% trans "Отправить заявку на удаление или изменение записи" %}</a>
+                    {% else %}
+                    <p class="text-muted">{% trans "Прием состоялся. Изменения невозможны." %}</p>
+                    {% endif %}
+                    {% endif %}
+                </div>
+                <a class="btn btn-outline-secondary mt-3" href="{% url 'appointments:appointment_list'%}"
+                       role="button">{% trans "Назад" %}</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

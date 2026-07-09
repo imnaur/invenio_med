@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="col-6 mx-auto">
+    <h3>{% trans "Редактирование профиля" %}</h3>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">{% trans "Сохранить изменения" %}</button>
+        <a href="{% url 'users:profile' %}" class="btn btn-outline-danger">{% trans "Отмена" %}</a>
+    </form>
+</div>
+{% endblock %}
