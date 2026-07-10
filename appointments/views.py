@@ -32,8 +32,8 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
         form.instance.patient = self.request.user
         form.instance.status = "created"
         response = super().form_valid(form)
-        user = self.request.user.email
         appointment_date = form.instance.date
+        user = self.request.user
 
         send_appointment_email_task.delay(
             patient_name=f"{user.first_name} {user.last_name}",
