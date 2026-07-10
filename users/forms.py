@@ -1,8 +1,10 @@
-from django.contrib.auth.forms import forms, UserCreationForm, AuthenticationForm
-from .models import CustomUser
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Submit, Row, Column
+from crispy_forms.layout import Column, Layout, Row, Submit
+from django.contrib.auth.forms import (AuthenticationForm, UserCreationForm,
+                                       forms)
 from django.utils.translation import gettext_lazy as _
+
+from .models import CustomUser
 
 
 class CustomUserCreationForm(UserCreationForm):

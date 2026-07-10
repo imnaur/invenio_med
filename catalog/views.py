@@ -1,15 +1,11 @@
-from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
+from django.contrib.auth.mixins import (LoginRequiredMixin,
+                                        PermissionRequiredMixin)
 from django.urls import reverse_lazy
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
 
 from catalog.forms import ServiceForm
 from catalog.models import Service
-from django.views.generic import (
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-    ListView,
-)
 
 
 class ServiceCreateView(PermissionRequiredMixin, CreateView):

@@ -1,13 +1,12 @@
-from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
+from django.core.mail import send_mail
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView
-
-from pages.models import StaticPage, ContactMessage
+from dotenv import load_dotenv
 
 from blog.models import Blog
-from dotenv import load_dotenv
+from pages.models import ContactMessage, StaticPage
 
 load_dotenv(override=True)
 

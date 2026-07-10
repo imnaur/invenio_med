@@ -1,22 +1,22 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import (LoginRequiredMixin,
+                                        PermissionRequiredMixin)
 from django.urls import reverse_lazy
-from django.views.generic import (
-    CreateView,
-    ListView,
-    DetailView,
-    UpdateView,
-    DeleteView,
-)
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
+
 from users.models import CustomUser
-from .models import Appointment, DiagnosticResult
+
 from .forms import AppointmentForm, DiagnosticResultForm
+from .models import Appointment, DiagnosticResult
 from .tasks import send_appointment_email_task
 
 # ----------------------------------Appointment------------------------------------------
 
 
 class AppointmentCreateView(LoginRequiredMixin, CreateView):
+    """Класс по созданию новой записи"""
+
     model = Appointment
     form_class = AppointmentForm
     template_name = "appointments/appointment_create.html"
@@ -24,6 +24,7 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("appointments:appointment_list")
 
     def form_valid(self, form):
+        """Метод привязывает запись к пациенту и отправляет письмо на почту"""
         form.instance.patient = self.request.user
         form.instance.status = "created"
         response = super().form_valid(form)
@@ -42,6 +43,7 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
 
 
 class AppointmentListView(LoginRequiredMixin, ListView):
+    """Класс выводит все записи"""
     model = Appointment
     template_name = "appointments/appointment_list.html"
     context_object_name = "appointments"
@@ -56,11 +58,13 @@ class AppointmentListView(LoginRequiredMixin, ListView):
 
 
 class AppointmentDetailView(LoginRequiredMixin, DetailView):
+    """Класс о деталях определенной записи"""
     model = Appointment
     template_name = "appointments/appointment_detail.html"
     context_object_name = "appointment"
 
     def get_queryset(self):
+        """"""
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return Appointment.objects.all()

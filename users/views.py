@@ -24,18 +24,16 @@
 #         # 4. Отправка обратно в чат
 #         await websocket.send_text(ai_response)
 
+from django.conf import settings
+from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, UpdateView, DetailView
-from django.contrib.auth import login
 from django.core.mail import send_mail
-from django.conf import settings
-from .forms import (
-    CustomUserCreationForm,
-    CustomUserAuthenticationForm,
-    CustomUserProfileForm,
-)
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, UpdateView
+
+from .forms import (CustomUserAuthenticationForm, CustomUserCreationForm,
+                    CustomUserProfileForm)
 from .models import CustomUser
 
 

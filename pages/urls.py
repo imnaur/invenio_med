@@ -1,4 +1,5 @@
 from django.urls import path
+
 from pages.views import HomeTemplateView, StaticPageView
 
 app_name = "pages"

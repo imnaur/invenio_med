@@ -1,6 +1,7 @@
 from django import forms
-from .models import Appointment, DiagnosticResult
 from django.utils.translation import gettext_lazy as _
+
+from .models import Appointment, DiagnosticResult
 
 
 class AppointmentForm(forms.ModelForm):

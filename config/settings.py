@@ -1,5 +1,5 @@
-from pathlib import Path
 import os
+from pathlib import Path
 
 from celery.schedules import crontab
 from dotenv import load_dotenv
@@ -31,9 +31,8 @@ INSTALLED_APPS = [
     "chatbot",
     "crispy_forms",
     "crispy_bootstrap5",
-    'celery',
-    'django_celery_beat',
-
+    "celery",
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -97,7 +96,12 @@ LANGUAGES = [
     ("ru", "Russian"),
     ("en", "English"),
 ]
-gettext = lambda s: s
+
+
+def gettext(s):
+    return s
+
+
 MODELTRANSLATION_DEFAULT_LANGUAGE = "ru"
 USE_I18N = True
 
@@ -135,7 +139,7 @@ EMAIL_USE_SSL = False
 LOGIN_URL = "users:login"
 LOGIN_REDIRECT_URL = "users:profile"
 
-REDIS_HOST=os.getenv('REDIS_HOST')
+REDIS_HOST = os.getenv("REDIS_HOST")
 CELERY_BROKER_URL = f"redis://{REDIS_HOST}:6379/0"
 CELERY_RESULT_BACKEND = f"redis://{REDIS_HOST}:6379/0"
 

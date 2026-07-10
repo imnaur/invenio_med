@@ -1,9 +1,10 @@
-from django.db import models
-from catalog.models import Service
 import uuid
 
-from users.models import CustomUser
+from django.db import models
 from django.utils.translation import gettext_lazy as _
+
+from catalog.models import Service
+from users.models import CustomUser
 
 STATUS_CHOICES_APPOINTMENT = [
     ("created", _("Создана")),
