@@ -1,0 +1,49 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Детали услуги" %}{% endblock %}
+
+{% block content %}
+
+<h2>{% trans "О услуге" %}</h2>
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4 col-sm-6">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">{{ service.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="mt-3 mb-2 text-start m-2">
+                        {{ service.description|truncatechars:100 }}
+                    </p>
+                    <p class="mt-3 mb-2 text-start m-2"><strong>{% trans "Цена" %}:</strong> {{ service.price }} {% trans "руб." %}</p>
+                    <p class="mt-3 mb-2 text-start m-2"><strong>{% trans "Продолжительность" %}:</strong> {{ service.duration }} {% trans "мин." %}</p>
+                    <p class="mt-3 mb-2 text-start m-2"><strong>{% trans "Срок выполнения" %}:</strong> {{ service.completion_date }} {% trans "(в днях)" %}.</p>
+                    <p class="mt-3 mb-2 text-start m-2"
+                    ><strong>{% trans "Правило сдачи" %}:</strong> {{ service.get_rules_display }}.</p>
+
+
+                    {% if user.is_staff %}
+                    <div class="d-flex gap-2">
+                        <a href="{% url 'catalog:service_update' service.pk %}" class="btn btn-outline-warning btn-sm">{% trans "Редактировать" %}</a>
+                        <a href="{% url 'catalog:service_delete' service.pk %}" class="btn btn-outline-danger btn-sm">{% trans "Удалить" %}</a>
+                    </div>
+                    {% endif %}
+                    <div>
+                        <a class="btn btn-outline-secondary btn-sm mt-4" href="{% url 'catalog:service_list'%}" role="button">{% trans "Назад к списку" %}</a>
+                        {% if not user.is_doctor and not user.is_staff %}
+                        <a class="btn btn-primary btn-sm mt-4" href="{% url 'appointments:appointment_create'%}"
+                           role="button">{% trans "Записаться" %}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+

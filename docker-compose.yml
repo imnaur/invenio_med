@@ -1,0 +1,87 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Django.Dockerfile
+    command: > 
+      sh -c "python manage.py makemigrations && python manage.py migrate  && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3"
+    restart: always
+    expose:
+      - "8000"
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=db
+    volumes:
+      - django_static:/app/static/
+    depends_on:
+      - db
+
+  celery_worker:
+    build:
+      context: .
+      dockerfile: Django.Dockerfile
+    command: celery -A config worker --loglevel=info
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=db
+    depends_on:
+      - db
+      - redis
+
+  celery_beat:
+    build:
+      context: .
+      dockerfile: Django.Dockerfile
+    command: celery -A config beat --loglevel=info
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=db
+    depends_on:
+      - db
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    command: redis-server --appendonly yes --save 60 1
+    expose:
+      - "6379"
+    volumes:
+      - redis_data:/data
+
+  db:
+    image: postgres:16-alpine
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    expose:
+      - "5432"
+
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Nginx.Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - django_static:/var/www/html/static
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  django_static:
+  redis_data:

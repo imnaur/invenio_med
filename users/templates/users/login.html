@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+{% load i18n %}
+
+
+<div class="container" style="margin-top: 100px !important;">
+    <div class="row justify-content-center">
+        <div class="col-md-4"><h2 class="mb-4">{% trans "Вход" %}</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary rounded-pill px-5">{% trans "Войти" %}</button>
+            </form>
+            <div class="mt-3 text-left">
+                <a href="{% url 'users:password_reset' %}" class="text-muted">{% trans "Забыли пароль?" %}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

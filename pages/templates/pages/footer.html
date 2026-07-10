@@ -1,0 +1,27 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+</head>
+<body>
+<footer class="footer mt-auto py-4 bg-white border-top border-light-subtle">
+    <div class="container text-center text-md-start">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <span class="text-muted small">&copy; 2026 invenioMED. {% trans "Все права защищены." %}</span>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="{% url 'catalog:service_list' %}" class="text-secondary text-decoration-none small hover-link me-3">{% trans "Услуги" %}</a>
+                <a href="{% url 'blog:blog_list' %}" class="text-secondary text-decoration-none small hover-link me-3">{% trans "Справочник" %}</a>
+                <a href="#" class="text-secondary text-decoration-none small hover-link me-3">{% trans "Акции" %}</a>
+                <a href="{% url 'pages:page_detail' page_slug='about' %}" class="text-secondary text-decoration-none small hover-link me-3">{% trans "Контакты" %}</a>
+                <a href="#" class="text-secondary text-decoration-none small hover-link me-3">{% trans "Вакансии" %}</a>
+                <a href="#" class="text-secondary text-decoration-none small hover-link">{% trans "Конфиденциальность" %}</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

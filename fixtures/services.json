@@ -1,0 +1,275 @@
+[
+{
+    "model": "catalog.service",
+    "pk": 1,
+    "fields": {
+        "name": "Полный чек-ап \"Здоровье щитовидной железы\"",
+        "name_ru": "Полный чек-ап \"Здоровье щитовидной железы\"",
+        "name_en": "Comprehensive “Thyroid Health” Checkup",
+        "description": "Анализ уровня гормонов ТТГ, Т4 свободный, Т3 свободный и антител к ТПО.",
+        "description_ru": "Анализ уровня гормонов ТТГ, Т4 свободный, Т3 свободный и антител к ТПО.",
+        "description_en": "Testing for TSH, free T4, free T3, and anti-TPO antibodies.",
+        "price": 2800,
+        "duration": "00:00:10",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "2",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 2,
+    "fields": {
+        "name": "Биохимический анализ крови (расширенный)",
+        "name_ru": "Биохимический анализ крови (расширенный)",
+        "name_en": "Comprehensive Blood Biochemistry Panel",
+        "description": "Оценка работы печени, почек, уровня сахара и холестерина.",
+        "description_ru": "Оценка работы печени, почек, уровня сахара и холестерина.",
+        "description_en": "Assessment of liver and kidney function, blood sugar, and cholesterol levels.",
+        "price": 3500,
+        "duration": "00:00:15",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "3",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 3,
+    "fields": {
+        "name": "Диагностика дефицита витаминов и минералов",
+        "name_ru": "Диагностика дефицита витаминов и минералов",
+        "name_en": "Diagnosis of Vitamin and Mineral Deficiencies",
+        "description": "Проверка уровней витамина D, ферритина, В12 и магния.",
+        "description_ru": "Проверка уровней витамина D, ферритина, В12 и магния.",
+        "description_en": "Testing for vitamin D, ferritin, vitamin B12, and magnesium levels.",
+        "price": 4200,
+        "duration": "00:00:10",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "2",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 4,
+    "fields": {
+        "name": "Глюкоза (в плазме)",
+        "name_ru": "Глюкоза (в плазме)",
+        "name_en": "Glucose (Plasma)",
+        "description": "Основной показатель углеводного обмена, используемый для диагностики диабета.",
+        "description_ru": "Основной показатель углеводного обмена, используемый для диагностики диабета.",
+        "description_en": "The primary marker of carbohydrate metabolism used to screen for and diagnose diabetes.",
+        "price": 850,
+        "duration": "00:00:10",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "2",
+        "rules": "Don't eat for two hours",
+        "rules_ru": "Don't eat for two hours",
+        "rules_en": "Don't eat for two hours"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 5,
+    "fields": {
+        "name": "Общий анализ мочи",
+        "name_ru": "Общий анализ мочи",
+        "name_en": "General Urinalysis",
+        "description": "Исследование состава мочи для оценки функции почек и выявления воспалений мочевыводящих путей.",
+        "description_ru": "Исследование состава мочи для оценки функции почек и выявления воспалений мочевыводящих путей.",
+        "description_en": "A diagnostic test to evaluate kidney function and detect urinary tract infections or metabolic diseases.",
+        "price": 2500,
+        "duration": "00:00:20",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "1",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 6,
+    "fields": {
+        "name": "С-реактивный белок (СРБ)",
+        "name_ru": "С-реактивный белок (СРБ)",
+        "name_en": "C-reactive protein (CRP)",
+        "description": "Чувствительный индикатор острого воспаления и повреждения тканей в организме.",
+        "description_ru": "Чувствительный индикатор острого воспаления и повреждения тканей в организме.",
+        "description_en": "A sensitive indicator of acute inflammation and tissue damage within the body.",
+        "price": 2500,
+        "duration": "00:00:45",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "1",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 7,
+    "fields": {
+        "name": "Креатинин",
+        "name_ru": "Креатинин",
+        "name_en": "Creatinine",
+        "description": "Продукт обмена веществ, позволяющий оценить фильтрационную способность почек.",
+        "description_ru": "Продукт обмена веществ, позволяющий оценить фильтрационную способность почек.",
+        "description_en": "A waste product used to assess how well the kidneys are filtering blood.",
+        "price": 1500,
+        "duration": "00:00:30",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "3",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 10,
+    "fields": {
+        "name": "Витамин D",
+        "name_ru": "Витамин D",
+        "name_en": "Vitamine D",
+        "description": "Показывает уровень этого витамина, критически важного для иммунитета и здоровья костей.",
+        "description_ru": "Показывает уровень этого витамина, критически важного для иммунитета и здоровья костей.",
+        "description_en": "Measures the level of this vitamin, essential for immune function and bone health.",
+        "price": 2800,
+        "duration": "00:01:00",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "2",
+        "rules": "Don't eat for two hours",
+        "rules_ru": "Don't eat for two hours",
+        "rules_en": "Don't eat for two hours"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 11,
+    "fields": {
+        "name": "Магний",
+        "name_ru": "Магний",
+        "name_en": "Magnesium",
+        "description": "Жизненно важный микроэлемент, необходимый для работы нервной системы и мышц.",
+        "description_ru": "Жизненно важный микроэлемент, необходимый для работы нервной системы и мышц.",
+        "description_en": "A vital mineral essential for proper nerve and muscle function.",
+        "price": 2500,
+        "duration": "00:00:50",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "3",
+        "rules": "On an empty stomach",
+        "rules_ru": "On an empty stomach",
+        "rules_en": "On an empty stomach"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 12,
+    "fields": {
+        "name": "АЛТ (Аланинаминотрансфераза)",
+        "name_ru": "АЛТ (Аланинаминотрансфераза)",
+        "name_en": "ALT (Alanine Aminotransferase)",
+        "description": "Фермент, используемый для оценки функции печени и диагностики её повреждений.",
+        "description_ru": "Фермент, используемый для оценки функции печени и диагностики её повреждений.",
+        "description_en": "An enzyme used to assess liver function and detect liver damage.",
+        "price": 4000,
+        "duration": "00:01:00",
+        "service_type": "lab_test",
+        "service_type_ru": "lab_test",
+        "service_type_en": "lab_test",
+        "completion_date": "3",
+        "rules": "Don't eat for two hours",
+        "rules_ru": "Don't eat for two hours",
+        "rules_en": "Don't eat for two hours"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 13,
+    "fields": {
+        "name": "Консультация у кардиолога",
+        "name_ru": "Консультация у кардиолога",
+        "name_en": "Consultation with a cardiologist",
+        "description": "Консультация с врачом",
+        "description_ru": "Консультация с врачом",
+        "description_en": "Consultation with a doctor",
+        "price": 1700,
+        "duration": "00:00:45",
+        "service_type": "doctor_appointment",
+        "service_type_ru": "doctor_appointment",
+        "service_type_en": "doctor_appointment",
+        "completion_date": "0",
+        "rules": "No rules",
+        "rules_ru": "No rules",
+        "rules_en": "No rules"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 14,
+    "fields": {
+        "name": "Консультация у врача-эндокринолога",
+        "name_ru": "Консультация у врача-эндокринолога",
+        "name_en": "Consultation with an endocrinologist",
+        "description": "Консультация с врачом",
+        "description_ru": "Консультация с врачом",
+        "description_en": "Consultation with a doctor",
+        "price": 1700,
+        "duration": "00:00:45",
+        "service_type": "doctor_appointment",
+        "service_type_ru": "doctor_appointment",
+        "service_type_en": "doctor_appointment",
+        "completion_date": "0",
+        "rules": "No rules",
+        "rules_ru": "No rules",
+        "rules_en": "No rules"
+    }
+},
+{
+    "model": "catalog.service",
+    "pk": 15,
+    "fields": {
+        "name": "Консультация у эндокринолога",
+        "name_ru": "Консультация у эндокринолога",
+        "name_en": "Consultation with an endocrinologist",
+        "description": "Консультация с врачом",
+        "description_ru": "Консультация с врачом",
+        "description_en": "Consultation with a doctor",
+        "price": 1700,
+        "duration": "00:00:45",
+        "service_type": "doctor_appointment",
+        "service_type_ru": "doctor_appointment",
+        "service_type_en": "doctor_appointment",
+        "completion_date": "0",
+        "rules": "No rules",
+        "rules_ru": "No rules",
+        "rules_en": "No rules"
+    }
+}
+]

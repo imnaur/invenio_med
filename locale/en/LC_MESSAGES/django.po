@@ -1,0 +1,918 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-08 16:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: appointments/forms.py:29
+#, fuzzy
+#| msgid "Дата и время записи"
+msgid "Дата обязательна для записи."
+msgstr "Date and time of entry"
+
+#: appointments/models.py:9
+msgid "Создана"
+msgstr "Created"
+
+#: appointments/models.py:10
+msgid "Подтверждена"
+msgstr "Confirmed"
+
+#: appointments/models.py:11
+msgid "Завершена"
+msgstr "Closed"
+
+#: appointments/models.py:15
+msgid "В работе"
+msgstr "In process"
+
+#: appointments/models.py:16
+msgid "Готово"
+msgstr "Ready"
+
+#: appointments/models.py:21
+#: appointments/templates/appointments/appointment_create.html:32
+#: appointments/templates/appointments/appointment_list.html:26
+#: appointments/templates/appointments/appointment_update.html:21
+msgid "Пациент"
+msgstr "Patient"
+
+#: appointments/models.py:22
+#: appointments/templates/appointments/appointment_create.html:36
+msgid "Дата и время записи"
+msgstr "Date and time of entry"
+
+#: appointments/models.py:23
+#: appointments/templates/appointments/appointment_create.html:40
+#: appointments/templates/appointments/appointment_update.html:29
+msgid "Услуга"
+msgstr "Service"
+
+#: appointments/models.py:24
+#: appointments/templates/appointments/appointment_list.html:28
+#: appointments/templates/appointments/appointment_update.html:33
+#: appointments/templates/appointments/result_list.html:25
+msgid "Статус"
+msgstr "Status"
+
+#: appointments/models.py:40
+msgid "Запись"
+msgstr "Entry"
+
+#: appointments/models.py:41
+msgid "Текст результата"
+msgstr "Result text"
+
+#: appointments/models.py:42
+msgid "Загрузите PDF анализов"
+msgstr "Download the PDF of the analyses"
+
+#: appointments/models.py:42
+msgid "PDF анализов"
+msgstr "PDF result"
+
+#: appointments/models.py:43
+msgid "Дата и время загрузки анализов"
+msgstr "Date and time of test results upload"
+
+#: appointments/models.py:44
+msgid "Статус результата"
+msgstr "Result status"
+
+#: appointments/templates/appointments/appointment_confirm_delete.html:4
+msgid "Удаление записи"
+msgstr "Entry delete"
+
+#: appointments/templates/appointments/appointment_confirm_delete.html:12
+#: appointments/templates/appointments/result_confirm_delete.html:12
+#: blog/templates/blog/blog_confirm_delete.html:12
+#: catalog/templates/catalog/service_confirm_delete.html:11
+msgid "Подтверждение удаления"
+msgstr "Confirm deletion"
+
+#: appointments/templates/appointments/appointment_confirm_delete.html:13
+msgid "Вы действительно хотите удалить запись"
+msgstr "Are you sure you want to delete the blog?"
+
+#: appointments/templates/appointments/appointment_confirm_delete.html:14
+#: appointments/templates/appointments/result_confirm_delete.html:13
+msgid "Это действие нельзя будет отменить"
+msgstr "This action cannot be undone."
+
+#: appointments/templates/appointments/appointment_confirm_delete.html:19
+#: appointments/templates/appointments/result_confirm_delete.html:18
+#: blog/templates/blog/blog_confirm_delete.html:18
+#: catalog/templates/catalog/service_confirm_delete.html:18
+msgid "Да, удалить"
+msgstr "Yes, delete"
+
+#: appointments/templates/appointments/appointment_confirm_delete.html:20
+#: appointments/templates/appointments/appointment_update.html:44
+#: appointments/templates/appointments/result_confirm_delete.html:19
+#: appointments/templates/appointments/result_update.html:23
+#: blog/templates/blog/blog_confirm_delete.html:19
+#: blog/templates/blog/blog_update.html:23
+#: catalog/templates/catalog/service_confirm_delete.html:19
+#: catalog/templates/catalog/service_update.html:23
+#: users/templates/users/profile_update.html:11
+msgid "Отмена"
+msgstr "Сancel"
+
+#: appointments/templates/appointments/appointment_create.html:5
+msgid "Создание записи"
+msgstr "Create a new blog"
+
+#: appointments/templates/appointments/appointment_create.html:9
+msgid ""
+"Примите к сведению, что отмена или перенос записи после подтверждения "
+"возможны не позднее чем за 24 часа до назначенного времени. Оформить отмену "
+"или изменение Вы сможете отправив заявку в разделе 'Контакты'."
+msgstr ""
+"Please note that cancellations or rescheduling of an appointment after "
+"confirmation are possible no later than 24 hours before the scheduled time. "
+"You can request a cancellation or change by submitting a request in the"
+
+#: appointments/templates/appointments/appointment_create.html:10
+#: appointments/templates/appointments/appointment_detail.html:14
+msgid ""
+"За изменения или перенос позднее чем 24 часа до записи взимается компенсация "
+"в размере половины запланированной услуги*."
+msgstr ""
+"A fee will be charged for changes or rescheduling made less than 24 hours "
+"before the appointment equal to half the cost of the scheduled service*."
+
+#: appointments/templates/appointments/appointment_create.html:15
+msgid "Добавление новой записи"
+msgstr "Create a new entry"
+
+#: appointments/templates/appointments/appointment_create.html:22
+msgid "Пожалуйста, исправьте ошибки ниже"
+msgstr "Please correct the errors below:"
+
+#: appointments/templates/appointments/appointment_create.html:44
+#: appointments/templates/appointments/appointment_list.html:27
+#: catalog/templates/catalog/service_detail.html:21
+#: catalog/templates/catalog/service_list.html:27
+msgid "Цена"
+msgstr "Price"
+
+#: appointments/templates/appointments/appointment_create.html:46
+#: appointments/templates/appointments/appointment_list.html:27
+#: catalog/templates/catalog/service_list.html:27
+msgid "руб"
+msgstr "rub"
+
+#: appointments/templates/appointments/appointment_create.html:48
+msgid "Выберите услугу, чтобы увидеть цену"
+msgstr "Select a service to see the price"
+
+#: appointments/templates/appointments/appointment_create.html:52
+#: appointments/templates/appointments/result_create.html:41
+#: blog/templates/blog/blog_detail.html:31
+#: catalog/templates/catalog/service_create.html:41
+#: catalog/templates/catalog/service_detail.html:35
+msgid "Назад к списку"
+msgstr "Back to lists"
+
+#: appointments/templates/appointments/appointment_create.html:53
+#: appointments/templates/appointments/result_create.html:42
+msgid "Создать запись"
+msgstr "Create a new result"
+
+#: appointments/templates/appointments/appointment_detail.html:5
+msgid "Детали записи"
+msgstr "Entry details"
+
+#: appointments/templates/appointments/appointment_detail.html:9
+msgid "О записи"
+msgstr "About entry"
+
+#: appointments/templates/appointments/appointment_detail.html:12
+msgid ""
+"Изменения в бронировании принимаются через форму заявки в разделе «Контакты»."
+msgstr ""
+"Changes to reservations can be made using the request form in the ‘Contact "
+"Us’ section."
+
+#: appointments/templates/appointments/appointment_detail.html:13
+msgid ""
+"Отмена или перенос записи после подтверждения возможны не позднее чем за 24 "
+"часа до назначенного времени."
+msgstr ""
+"Appointments may be canceled or rescheduled after confirmation no later than "
+"24 hours before the scheduled time."
+
+#: appointments/templates/appointments/appointment_detail.html:15
+msgid ""
+"Пример заявки на изменение: пожалуйста удалите/перенесите мою запись (дата, "
+"время, услуга)*"
+msgstr ""
+"Example of a change request: Please delete/move my entry (date, time, "
+"service)*"
+
+#: appointments/templates/appointments/appointment_detail.html:38
+msgid "К результатам"
+msgstr "To results"
+
+#: appointments/templates/appointments/appointment_detail.html:40
+msgid "Результат диагностики еще не добавлен."
+msgstr "Accurate diagnosis is the foundation of your health."
+
+#: appointments/templates/appointments/appointment_detail.html:47
+#: appointments/templates/appointments/result_detail.html:28
+#: blog/templates/blog/blog_detail.html:26
+#: catalog/templates/catalog/service_detail.html:30
+msgid "Редактировать"
+msgstr "Edit"
+
+#: appointments/templates/appointments/appointment_detail.html:49
+#: appointments/templates/appointments/appointment_update.html:43
+#: appointments/templates/appointments/result_detail.html:30
+#: blog/templates/blog/blog_detail.html:27
+#: catalog/templates/catalog/service_detail.html:31
+msgid "Удалить"
+msgstr "Delete"
+
+#: appointments/templates/appointments/appointment_detail.html:54
+msgid "Отправить заявку на удаление или изменение записи"
+msgstr "Submit a request to delete or edit an entry"
+
+#: appointments/templates/appointments/appointment_detail.html:56
+msgid "Прием состоялся. Изменения невозможны."
+msgstr "The appointment took place. No changes can be made."
+
+#: appointments/templates/appointments/appointment_detail.html:61
+#: appointments/templates/appointments/appointment_list.html:46
+#: appointments/templates/appointments/result_detail.html:34
+#: appointments/templates/appointments/result_list.html:43
+#: blog/templates/blog/blog_list.html:51
+#: catalog/templates/catalog/service_list.html:47
+msgid "Назад"
+msgstr "Back"
+
+#: appointments/templates/appointments/appointment_list.html:5
+#: appointments/templates/appointments/appointment_list.html:16
+#: pages/templates/pages/homepage.html:33
+msgid "Все записи"
+msgstr "All records"
+
+#: appointments/templates/appointments/appointment_list.html:11
+msgid "Создать новую запись"
+msgstr "Create a new entry"
+
+#: appointments/templates/appointments/appointment_list.html:25
+msgid "Дата"
+msgstr "Date"
+
+#: appointments/templates/appointments/appointment_list.html:30
+msgid "Подробнее о записи"
+msgstr "More about this entry"
+
+#: appointments/templates/appointments/appointment_list.html:35
+msgid "На данный момент записей нет."
+msgstr "There are no blog posts yet."
+
+#: appointments/templates/appointments/appointment_list.html:36
+#: appointments/templates/appointments/result_list.html:34
+#: blog/templates/blog/blog_list.html:41
+#: catalog/templates/catalog/service_list.html:37
+msgid "Назад на главную"
+msgstr "Back to homepage"
+
+#: appointments/templates/appointments/appointment_list.html:51
+#: appointments/templates/appointments/result_list.html:48
+#: blog/templates/blog/blog_list.html:56
+#: catalog/templates/catalog/service_list.html:52
+msgid "Страница"
+msgstr "Page"
+
+#: appointments/templates/appointments/appointment_list.html:56
+#: appointments/templates/appointments/result_list.html:53
+#: blog/templates/blog/blog_list.html:61
+#: catalog/templates/catalog/service_list.html:57
+msgid "Вперед"
+msgstr "Next"
+
+#: appointments/templates/appointments/appointment_update.html:6
+#: appointments/templates/appointments/appointment_update.html:14
+msgid "Редактирование записи"
+msgstr "Entry update"
+
+#: appointments/templates/appointments/appointment_update.html:25
+msgid "Текущая дата и время записи:"
+msgstr "Current date and time of the recording:"
+
+#: appointments/templates/appointments/appointment_update.html:39
+#: appointments/templates/appointments/result_update.html:24
+#: blog/templates/blog/blog_update.html:24
+#: catalog/templates/catalog/service_update.html:24
+#: users/templates/users/profile_update.html:10
+msgid "Сохранить изменения"
+msgstr "Save changes"
+
+#: appointments/templates/appointments/result_confirm_delete.html:4
+msgid "Удаление результата диагностики"
+msgstr "Result delete"
+
+#: appointments/templates/appointments/result_confirm_delete.html:13
+msgid "Вы действительно хотите удалить результат диагностики"
+msgstr "Are you sure you want to delete the blog?"
+
+#: appointments/templates/appointments/result_create.html:5
+msgid "Создание результата диагностики"
+msgstr "Result create"
+
+#: appointments/templates/appointments/result_create.html:13
+msgid "Добавление нового результата диагностики"
+msgstr "Create a new result"
+
+#: appointments/templates/appointments/result_create.html:20
+#: catalog/templates/catalog/service_create.html:20
+msgid "Пожалуйста, исправьте ошибки ниже:"
+msgstr "Please correct the errors below:"
+
+#: appointments/templates/appointments/result_detail.html:5
+msgid "Детали результата диагностики"
+msgstr "Diagnostic Laboratory details"
+
+#: appointments/templates/appointments/result_detail.html:9
+msgid "О результате диагностики"
+msgstr "More about result"
+
+#: appointments/templates/appointments/result_detail.html:22
+msgid "PDF файл"
+msgstr "PDF-file"
+
+#: appointments/templates/appointments/result_list.html:5
+#: appointments/templates/appointments/result_list.html:16
+msgid "Все результаты диагностики"
+msgstr "All results"
+
+#: appointments/templates/appointments/result_list.html:11
+msgid "Создать нового результата диагностики"
+msgstr "Result create"
+
+#: appointments/templates/appointments/result_list.html:26
+msgid "Дата и время загрузки"
+msgstr "Upload date and time"
+
+#: appointments/templates/appointments/result_list.html:28
+msgid "Подробнее о результате"
+msgstr "More about this result"
+
+#: appointments/templates/appointments/result_list.html:33
+msgid "На данный момент результатов нет."
+msgstr "There are no blog posts yet."
+
+#: appointments/templates/appointments/result_update.html:5
+#: appointments/templates/appointments/result_update.html:13
+msgid "Редактирование результата"
+msgstr "Edit result"
+
+#: blog/templates/blog/blog_confirm_delete.html:4
+msgid "Удаление блога"
+msgstr "Delete blog"
+
+#: blog/templates/blog/blog_confirm_delete.html:13
+#: catalog/templates/catalog/service_confirm_delete.html:12
+msgid "Вы действительно хотите удалить блог"
+msgstr "Are you sure you want to delete the blog?"
+
+#: blog/templates/blog/blog_confirm_delete.html:13
+#: catalog/templates/catalog/service_confirm_delete.html:12
+msgid "Это действие нельзя будет отменить."
+msgstr "This action cannot be undone."
+
+#: blog/templates/blog/blog_create.html:5
+#, fuzzy
+#| msgid "Создание блога"
+msgid "Создание блогв"
+msgstr "Create a new blog"
+
+#: blog/templates/blog/blog_detail.html:5
+msgid "Детали блога"
+msgstr "Blog details"
+
+#: blog/templates/blog/blog_detail.html:9
+msgid "О блоге"
+msgstr "About blog"
+
+#: blog/templates/blog/blog_list.html:5 blog/templates/blog/blog_list.html:15
+msgid "Наш блог"
+msgstr "Our blog"
+
+#: blog/templates/blog/blog_list.html:10
+msgid "Создать новый блог"
+msgstr "Create a new blog"
+
+#: blog/templates/blog/blog_list.html:34 pages/templates/pages/homepage.html:48
+msgid "Читать далее"
+msgstr "More"
+
+#: blog/templates/blog/blog_list.html:40
+msgid "На данный момент блогов нет."
+msgstr "There are no blog posts yet."
+
+#: blog/templates/blog/blog_update.html:5
+#: blog/templates/blog/blog_update.html:13
+msgid "Редактирование блога"
+msgstr "Our blog"
+
+#: catalog/models.py:5
+msgid "Лабораторный анализ"
+msgstr "Diagnostic Laboratory Technician"
+
+#: catalog/models.py:6
+msgid "Запись к врачу"
+msgstr "Make an appointment with a Doctor"
+
+#: catalog/models.py:10
+msgid "Натощак"
+msgstr "On an empty stomach"
+
+#: catalog/models.py:11
+msgid "Не есть за два часа"
+msgstr "Don't eat for two hours"
+
+#: catalog/models.py:12
+msgid "Нет ограничений"
+msgstr "No rules"
+
+#: catalog/models.py:16
+msgid "Название услуги"
+msgstr "Create a new service"
+
+#: catalog/models.py:17
+msgid "Описание услуги"
+msgstr "Service description"
+
+#: catalog/models.py:18
+msgid "Цена услуги"
+msgstr "Service price"
+
+#: catalog/models.py:19 catalog/templates/catalog/service_detail.html:22
+#: catalog/templates/catalog/service_list.html:28
+msgid "Продолжительность"
+msgstr "Duration"
+
+#: catalog/models.py:20
+msgid "Тип услуги"
+msgstr "Type of service"
+
+#: catalog/models.py:21 catalog/templates/catalog/service_detail.html:23
+#: catalog/templates/catalog/service_list.html:29
+msgid "Срок выполнения"
+msgstr "Completion date"
+
+#: catalog/models.py:22
+msgid "Правило подготовки для сдачи анализа"
+msgstr "Preparation Guidelines for the Test"
+
+#: catalog/templates/catalog/service_confirm_delete.html:3
+msgid "Удаление услуги"
+msgstr "Service delete"
+
+#: catalog/templates/catalog/service_create.html:5
+msgid "Создание услуги"
+msgstr "Service create"
+
+#: catalog/templates/catalog/service_create.html:13
+msgid "Добавление новой услуги"
+msgstr "Create a new service"
+
+#: catalog/templates/catalog/service_create.html:42
+msgid "Создать услугу"
+msgstr "Create a new service"
+
+#: catalog/templates/catalog/service_detail.html:5
+msgid "Детали услуги"
+msgstr "Blog details"
+
+#: catalog/templates/catalog/service_detail.html:9
+msgid "О услуге"
+msgstr "Services"
+
+#: catalog/templates/catalog/service_detail.html:21
+msgid "руб."
+msgstr "rub"
+
+#: catalog/templates/catalog/service_detail.html:22
+msgid "мин."
+msgstr "min"
+
+#: catalog/templates/catalog/service_detail.html:23
+#: catalog/templates/catalog/service_list.html:29
+msgid "(в днях)"
+msgstr "(in days)"
+
+#: catalog/templates/catalog/service_detail.html:25
+#: catalog/templates/catalog/service_list.html:30
+msgid "Правило сдачи"
+msgstr "Rules"
+
+#: catalog/templates/catalog/service_detail.html:38
+msgid "Записаться"
+msgstr "Sign up"
+
+#: catalog/templates/catalog/service_list.html:5
+#: catalog/templates/catalog/service_list.html:16
+msgid "Наши услуги"
+msgstr "Our services"
+
+#: catalog/templates/catalog/service_list.html:11
+msgid "Создать новую услугу"
+msgstr "Create a new service"
+
+#: catalog/templates/catalog/service_list.html:28
+msgid "мин"
+msgstr "min"
+
+#: catalog/templates/catalog/service_list.html:36
+msgid "На данный момент услуг нет."
+msgstr "There are no blog posts yet."
+
+#: catalog/templates/catalog/service_update.html:5
+#: catalog/templates/catalog/service_update.html:13
+msgid "Редактирование услуги"
+msgstr "Edit service"
+
+#: pages/templates/pages/about_company.html:5
+msgid "О компании - Invenio MED"
+msgstr "About invenioMED"
+
+#: pages/templates/pages/about_company.html:12
+msgid "О компании invenioMED"
+msgstr "About invenioMED"
+
+#: pages/templates/pages/about_company.html:13
+msgid "Мы заботимся о Вашем здоровье с профессионализмом и вниманием."
+msgstr "We look after your health with professionalism and care."
+
+#: pages/templates/pages/about_company.html:38
+msgid "Миссия и ценности"
+msgstr "Mission and values"
+
+#: pages/templates/pages/about_company.html:42
+msgid "Качество"
+msgstr "Quality"
+
+#: pages/templates/pages/about_company.html:43
+msgid ""
+"Использование только сертифицированного оборудования и проверенных методик."
+msgstr "Use only of certified equipment and proven methods"
+
+#: pages/templates/pages/about_company.html:48
+msgid "Забота"
+msgstr "Care"
+
+#: pages/templates/pages/about_company.html:49
+msgid ""
+"Пациент — наш главный приоритет. Индивидуальный подход к каждому случаю."
+msgstr ""
+"The patient is our top priority. We take a personalised approach to every "
+"case."
+
+#: pages/templates/pages/about_company.html:54
+msgid "Доступность"
+msgstr "Accessibility"
+
+#: pages/templates/pages/about_company.html:55
+msgid "Прозрачное ценообразование и удобная запись на прием онлайн."
+msgstr "Transparent pricing and convenient online booking."
+
+#: pages/templates/pages/about_company.html:63
+msgid "Наша команда"
+msgstr "About Team"
+
+#: pages/templates/pages/about_company.html:72
+msgid "Иванова Наталья Александровна"
+msgstr "Ivanova, Natalia Alexandrovna"
+
+#: pages/templates/pages/about_company.html:73
+msgid "Главный врач, терапевт"
+msgstr "Chief Medical Officer, General Practitioner"
+
+#: pages/templates/pages/about_company.html:84
+msgid "Петров Алексей Сергеевич"
+msgstr "Petrov, Alexey Sergeyevich "
+
+#: pages/templates/pages/about_company.html:85
+msgid "Гастроэнтеролог"
+msgstr "Gastroenterologist"
+
+#: pages/templates/pages/about_company.html:96
+msgid "Смирнов Дмитрий Евгеньевич"
+msgstr "Smirnov, Dmitry Yevgenyevich "
+
+#: pages/templates/pages/about_company.html:97
+msgid "Эндокринолог"
+msgstr "Endocrinologist"
+
+#: pages/templates/pages/about_company.html:108
+msgid "Петрова Анна Сергеевна"
+msgstr "Petrova, Anna Sergeevna "
+
+#: pages/templates/pages/about_company.html:109
+msgid "Лаборант-диагност"
+msgstr "Diagnostic Laboratory Technician"
+
+#: pages/templates/pages/about_company.html:121
+msgid "Сечина Оксана Владимировна"
+msgstr "Sechina, Oksana Vladimirovna"
+
+#: pages/templates/pages/about_company.html:122
+msgid "Кардиолог"
+msgstr "Cardiologist"
+
+#: pages/templates/pages/about_company.html:134
+msgid "Егорова Мия"
+msgstr "Egorova, Miya"
+
+#: pages/templates/pages/about_company.html:135
+msgid "Менеджер по работе с пациентами"
+msgstr "Patient Relations Manager"
+
+#: pages/templates/pages/base.html:48
+msgid "invenio Помощник"
+msgstr "Inveio Assistant"
+
+#: pages/templates/pages/base.html:52
+msgid "Чат с invenioBot"
+msgstr "Chat with invenioBot"
+
+#: pages/templates/pages/base.html:58 pages/templates/pages/contacts.html:41
+msgid "Отправить"
+msgstr "Send"
+
+#: pages/templates/pages/contacts.html:5
+msgid "Контакты — invenioMED"
+msgstr "Contacts"
+
+#: pages/templates/pages/contacts.html:11
+msgid "Свяжитесь с нами"
+msgstr "Contact Us"
+
+#: pages/templates/pages/contacts.html:12
+msgid "Мы всегда готовы ответить на Ваши вопросы и помочь с записью."
+msgstr ""
+"We are always happy to answer your questions and help you book an "
+"appointment."
+
+#: pages/templates/pages/contacts.html:29
+msgid "Написать сообщение"
+msgstr "Patient records"
+
+#: pages/templates/pages/contacts.html:37
+msgid "Сообщение"
+msgstr "Message"
+
+#: pages/templates/pages/contacts.html:39
+msgid "Чем мы можем вам помочь?"
+msgstr "How can we help you?"
+
+#: pages/templates/pages/contacts.html:50
+msgid "Как нас найти"
+msgstr "How to find us"
+
+#: pages/templates/pages/footer.html:13
+msgid "Все права защищены."
+msgstr "All rights reserved."
+
+#: pages/templates/pages/footer.html:16 pages/templates/pages/header.html:31
+msgid "Услуги"
+msgstr "Services"
+
+#: pages/templates/pages/footer.html:17
+msgid "Справочник"
+msgstr "Reference Guide"
+
+#: pages/templates/pages/footer.html:18
+msgid "Акции"
+msgstr "Promotions"
+
+#: pages/templates/pages/footer.html:19
+msgid "Контакты"
+msgstr "Contacts"
+
+#: pages/templates/pages/footer.html:20
+msgid "Вакансии"
+msgstr "Vacancies"
+
+#: pages/templates/pages/footer.html:21
+msgid "Конфиденциальность"
+msgstr "Privacy"
+
+#: pages/templates/pages/header.html:35
+msgid "О компании"
+msgstr "About Us"
+
+#: pages/templates/pages/header.html:39
+msgid "Связаться с нами"
+msgstr "Contact Us"
+
+#: pages/templates/pages/header.html:43
+msgid "Блог"
+msgstr "Blog"
+
+#: pages/templates/pages/header.html:51
+msgid "Записи пациентов"
+msgstr "Patient records"
+
+#: pages/templates/pages/header.html:53 pages/templates/pages/header.html:56
+msgid "Результаты пациентов"
+msgstr "Patient results"
+
+#: pages/templates/pages/header.html:60 users/templates/users/login.html:12
+#: users/templates/users/password_reset.html:19
+#: users/templates/users/password_reset_complete.html:7
+msgid "Войти"
+msgstr "Login"
+
+#: pages/templates/pages/header.html:63 users/templates/users/register.html:9
+msgid "Регистрация"
+msgstr "Registration"
+
+#: pages/templates/pages/header.html:66
+msgid "Мой кабинет"
+msgstr "My office"
+
+#: pages/templates/pages/header.html:69
+msgid "Выйти"
+msgstr "Logout"
+
+#: pages/templates/pages/homepage.html:15
+msgid "Точность диагностики — основа Вашего здоровья."
+msgstr "Accurate diagnosis is the foundation of your health."
+
+#: pages/templates/pages/homepage.html:16
+msgid "Современная лаборатория с заботой о каждом пациенте."
+msgstr "A modern laboratory that cares for every patient."
+
+#: pages/templates/pages/homepage.html:19 users/templates/users/profile.html:20
+msgid "Записаться на прием"
+msgstr "Create a new entry"
+
+#: pages/templates/pages/homepage.html:21
+msgid "Добро пожаловать во внутреннюю систему клиники!"
+msgstr "Welcome to the clinic’s internal system!"
+
+#: pages/templates/pages/homepage.html:22
+msgid "Для обработки записей пациентов переходите в записи*"
+msgstr "To view patient records, go to 'Records'*"
+
+#: pages/templates/pages/homepage.html:23
+msgid "Для обработки результатов пациентов переходите в результаты*"
+msgstr "To view patients’ results, go to 'Results'*"
+
+#: pages/templates/pages/homepage.html:25
+msgid "Войти для записи"
+msgstr "Log in to post"
+
+#: pages/templates/pages/homepage.html:32
+msgid "Последние записи в блоге"
+msgstr "Latest blog posts"
+
+#: pages/templates/pages/homepage.html:55
+msgid "Пока записей в блоге нет."
+msgstr "There are no blog posts yet."
+
+#: users/forms.py:36
+msgid "Зарегистрироваться"
+msgstr "Sign up"
+
+#: users/forms.py:41
+msgid "Ваш email или логин"
+msgstr "Your email or username"
+
+#: users/forms.py:42
+msgid "Пароль"
+msgstr "Passwort"
+
+#: users/models.py:9 users/templates/users/profile.html:10
+msgid "Имя"
+msgstr "First name"
+
+#: users/models.py:10 users/templates/users/profile.html:11
+msgid "Фамилия"
+msgstr "Last name"
+
+#: users/models.py:11
+msgid "Адрес почты"
+msgstr "Email"
+
+#: users/models.py:12
+msgid "Номер телефона"
+msgstr "Phone number"
+
+#: users/models.py:13 users/templates/users/profile.html:12
+msgid "Дата рождения"
+msgstr "Date of birth"
+
+#: users/models.py:14
+msgid "Адрес пациента"
+msgstr "Patient records"
+
+#: users/templates/users/login.html:8
+msgid "Вход"
+msgstr "Log in"
+
+#: users/templates/users/login.html:15
+msgid "Забыли пароль?"
+msgstr "Forgot your password?"
+
+#: users/templates/users/password_reset.html:8
+msgid "Восстановление пароля"
+msgstr "Password Recovery"
+
+#: users/templates/users/password_reset.html:14
+msgid "Адрес электронной почты"
+msgstr "Email"
+
+#: users/templates/users/password_reset.html:19
+msgid "Вспомнили пароль?"
+msgstr "Recovered your password?"
+
+#: users/templates/users/password_reset.html:22
+msgid "Отправить ссылку"
+msgstr "Send a link"
+
+#: users/templates/users/password_reset_complete.html:6
+msgid "Готово!"
+msgstr "Ready"
+
+#: users/templates/users/password_reset_complete.html:7
+msgid "Ваш пароль успешно изменен. Теперь Вы можете"
+msgstr "Your password has been successfully changed. You can now"
+
+#: users/templates/users/password_reset_confirm.html:9
+msgid "Придумайте новый пароль"
+msgstr "Create a new passwort"
+
+#: users/templates/users/password_reset_confirm.html:14
+msgid "Изменить пароль"
+msgstr "Change your passwort"
+
+#: users/templates/users/password_reset_confirm.html:16
+msgid "Ссылка устарела. Попробуйте еще раз."
+msgstr "The link is out of date. Please try again."
+
+#: users/templates/users/password_reset_done.html:6
+msgid "Письмо отправлено!"
+msgstr "Mail is send!"
+
+#: users/templates/users/password_reset_done.html:7
+msgid "Мы отправили инструкции по восстановлению на Ваш Email."
+msgstr "We have sent the recovery instructions to your email address."
+
+#: users/templates/users/profile.html:7
+msgid "Мой профиль"
+msgstr "My office"
+
+#: users/templates/users/profile.html:13
+msgid "Email"
+msgstr "Email"
+
+#: users/templates/users/profile.html:14
+msgid "Телефон"
+msgstr "Phone number"
+
+#: users/templates/users/profile.html:15
+msgid "Адрес проживания"
+msgstr "Address"
+
+#: users/templates/users/profile.html:21 users/templates/users/profile.html:23
+msgid "Просмотр всех записей"
+msgstr "View all entries"
+
+#: users/templates/users/profile.html:24
+msgid "Просмотр результатов диагностики"
+msgstr "All results"
+
+#: users/templates/users/profile.html:29
+msgid "Редактировать профиль"
+msgstr "Edit profile"
+
+#: users/templates/users/profile_update.html:6
+msgid "Редактирование профиля"
+msgstr "Profile update"
+
+#: users/templates/users/register.html:16
+msgid "У меня уже есть аккаунт"
+msgstr "I have already an account"
+
+#~ msgid "Создать результат"
+#~ msgstr "Create a new result"

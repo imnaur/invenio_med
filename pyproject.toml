@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "invenio_med"
+version = "0.1.0"
+description = "Thesis Skypro 2026"
+authors = ["Nargiza Imasheva <imnaur@bk.ru>"]
+package-mode = false
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.15"
+django = ">=6.0.6,<7.0.0"
+psycopg2-binary = ">=2.9.12,<3.0.0"
+dotenv = ">=0.9.9,<0.10.0"
+pillow = ">=12.2.0,<13.0.0"
+django-crispy-forms = ">=2.6,<3.0"
+crispy-bootstrap5 = ">=2026.3,<2027.0"
+coverage = "^7.15.0"
+gunicorn = "^26.0.0"
+openai = "^2.44.0"
+django-open-ai = "^0.1.0"
+django-modeltranslation = "^0.20.3"
+celery = "^5.6.3"
+redis = "^8.0.1"
+django-celery-beat = "^2.9.0"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.3.0"
+black = "^26.5.1"
+isort = "^8.0.1"
+mypy = "^2.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+

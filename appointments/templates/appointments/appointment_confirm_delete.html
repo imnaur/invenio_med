@@ -1,0 +1,28 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Удаление записи" %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title">{% trans "Подтверждение удаления" %}</h3>
+                    <p class="card-text mt-3">{% trans "Вы действительно хотите удалить запись" %}  <strong>"{{ service_name }}"</strong>?</p>
+                    <p>{% trans "Это действие нельзя будет отменить" %}.</p>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-danger">{% trans "Да, удалить" %}</button>
+                            <a href="{% url 'appointments:appointment_list' %}" class="btn btn-secondary">{% trans "Отмена" %}</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

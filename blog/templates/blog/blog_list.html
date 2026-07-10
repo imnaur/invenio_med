@@ -1,0 +1,68 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Наш блог" %}{% endblock %}
+{% block content %}
+
+{% if user.is_staff %}
+<div class="container mt-4">
+    <a href="{% url 'blog:blog_create' %}" class="btn btn-primary">{% trans "Создать новый блог" %}</a>
+</div>
+{% endif %}
+
+<div class="container mt-5">
+    <h2 class="mb-4">{% trans "Наш блог" %}</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for blog in blogs %}
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                {% if blog.image %}
+                <img src="{{ blog.image.url }}" class="card-img-top" alt="{{ blog.title }}"
+                     style="height: 200px; object-fit: cover;">
+                {% endif %}
+
+                <div class="card-body">
+                    <a href="{% url 'blog:blog_detail' blog.pk %}" class="text-decoration-none">
+                        <h5 class="card-title text-primary">{{ blog.title }}</h5>
+                    </a>
+                    <p class="card-text text-muted">{{ blog.content|truncatewords:50 }}</p>
+                </div>
+
+                <div class="card-footer bg-white border-0">
+                    <a href="{% url 'blog:blog_detail' blog.pk %}" class="btn btn-outline-primary btn-sm">{% trans "Читать далее" %}</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>{% trans "На данный момент блогов нет." %}</p>
+            <a href="{% url 'pages:home' %}" class="btn btn-secondary">{% trans "Назад на главную" %}</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if is_paginated %}
+    <nav aria-label="Page navigation" class="mt-5">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "Назад" %}</a>
+            </li>
+            {% endif %}
+
+            <li class="page-item disabled">
+                <span class="page-link">{% trans "Страница" %} {{ page_obj.number }}  {{ page_obj.paginator.num_pages }}</span>
+            </li>
+
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "Вперед" %}</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{% endblock %}

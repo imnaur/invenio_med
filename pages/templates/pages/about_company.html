@@ -1,0 +1,152 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} {% trans "О компании - Invenio MED" %} {% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <!-- Заголовок -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">{% trans "О компании invenioMED"%}</h1>
+        <p class="lead text-secondary">{% trans "Мы заботимся о Вашем здоровье с профессионализмом и вниманием."%}</p>
+    </div>
+
+    <!-- История компании -->
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="main-text">
+                    {{ page.content|linebreaks }}
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                {% if page.image %}
+                <img src="{{ page.image.url }}" class="img-fluid rounded shadow" alt="{{ page.title }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Миссия и ценности -->
+    <div class="row mb-5 text-center">
+        <div class="col-12 mb-4 ">
+            <h2 class="mb-3 text-primary">{% trans "Миссия и ценности" %}</h2>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <h5>{% trans "Качество" %} </h5>
+                <p class="text-secondary">{% trans "Использование только сертифицированного оборудования и проверенных методик." %}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <h5>{% trans "Забота" %}</h5>
+                <p class="text-secondary"> {% trans "Пациент — наш главный приоритет. Индивидуальный подход к каждому случаю." %}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <h5>{% trans "Доступность" %}</h5>
+                <p class="text-secondary">{% trans "Прозрачное ценообразование и удобная запись на прием онлайн." %}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Команда врачей -->
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h2 class="mb-3 text-primary">{% trans "Наша команда"%}</h2>
+        </div>
+
+        <!-- Карточка врача 1 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{% static 'main_doctor.png' %}" class="card-img-top"
+                     style="height: 300px; object-fit: cover; object-position: center 20%;" alt="Врач 1">
+                <div class="card-body">
+                    <h5 class="card-title"> {% trans "Иванова Наталья Александровна" %}</h5>
+                    <p class="card-text text-muted">{% trans "Главный врач, терапевт" %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка врача 2 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{% static 'gastroenterologist.png' %}" class="card-img-top"
+                     style="height: 300px; object-fit: cover; object-position: center 20%;" alt="Врач 2">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Петров Алексей Сергеевич" %}</h5>
+                    <p class="card-text text-muted">{% trans "Гастроэнтеролог" %} </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка врача 3 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{% static 'endocrinologist.png' %}" class="card-img-top"
+                     style="height: 300px; object-fit: cover; object-position: center 20%;" alt="Врач 4">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Смирнов Дмитрий Евгеньевич" %}</h5>
+                    <p class="card-text text-muted">{% trans "Эндокринолог" %} </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка врача 4 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{% static 'labdoc.png' %}" class="card-img-top"
+                     style="height: 300px; object-fit: cover; object-position: center 20%;" alt="Врач 5">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Петрова Анна Сергеевна" %}</h5>
+                    <p class="card-text text-muted">{% trans "Лаборант-диагност" %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка врача 5 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{% static 'cardiologist.png' %}" class="card-img-top"
+                     style="height: 300px; object-fit: cover; object-position: center 20%;" alt="Врач 6">
+
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Сечина Оксана Владимировна" %}</h5>
+                    <p class="card-text text-muted">{% trans "Кардиолог" %} </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 6 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{% static 'receptionist.png' %}" class="card-img-top"
+                     style="height: 300px; object-fit: cover; object-position: center 20%;" alt="Рессепшн">
+
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Егорова Мия" %}</h5>
+                    <p class="card-text text-muted">{% trans "Менеджер по работе с пациентами" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% load cache %}
+{% cache 86400 footer %}
+{% endcache %}
+{% endblock %}
+
+<!--**Страница "О компании"**: -->
+
+<!-- - История компании.-->
+<!-- - Миссия и ценности.-->
+<!-- - Команда врачей.-->
