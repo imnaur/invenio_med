@@ -1,29 +1,3 @@
-# websocket info потоки
-# Cash
-# results -> Doc send to Pat = Pat see / send mail message to email --> Перекидывать на сервисы
-# оплата через Stripe -> оплата заранее -3%
-# home / нету города, поле поиска, режима работы клиник, услуги выезда на дом, сообщить об ошибке на сайте ,
-# футер / услуги клиентам, акции, о компании, справочная
-#
-# # Упрощенная логика внутри FastAPI
-# @app.websocket("/ws/chat")
-# async def chat_endpoint(websocket: WebSocket):
-#     await websocket.accept()
-#     while True:
-#         user_input = await websocket.receive_text()
-#
-#         # 1. Поиск контекста в базе (RAG)
-#         context = await db.search_relevant_info(user_input)
-#
-#         # 2. Формирование промпта
-#         prompt = f"Ты помощник клиники. Используй этот контекст: {context}. Ответь: {user_input}"
-#
-#         # 3. Запрос к ИИ
-#         ai_response = await ai_client.chat(prompt)
-#
-#         # 4. Отправка обратно в чат
-#         await websocket.send_text(ai_response)
-
 from django.conf import settings
 from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -41,17 +15,20 @@ from .models import CustomUser
 
 
 class RegisterView(CreateView):
+    """Класс для регистрации юзеров"""
     form_class = CustomUserCreationForm
     template_name = "users/register.html"
     success_url = reverse_lazy("pages:home")
 
     def form_valid(self, form):
+        """Метод отправляет WELCOME письмо на почту юзера"""
         user = form.save()
         login(self.request, user)
         self.send_welcome_email(user.email)
         return super().form_valid(form)
 
     def send_welcome_email(self, user_email):
+        """Метод по отправке письма"""
         subject = "Добро пожаловать!"
         message = "Спасибо за регистрацию на нашем сайте клиники!"
         send_mail(
@@ -64,6 +41,7 @@ class RegisterView(CreateView):
 
 
 class CustomLoginView(LoginView):
+    """Класс для Log IN"""
     form_class = CustomUserAuthenticationForm
     template_name = "users/login.html"
     success_url = reverse_lazy("pages:home")
@@ -73,18 +51,22 @@ class CustomLoginView(LoginView):
 
 
 class CustomUserProfileView(LoginRequiredMixin, DetailView):
+    """Класс для профиля юзера"""
     model = CustomUser
     template_name = "users/profile.html"
 
     def get_object(self, queryset=None):
+        """Метод возвращает определенного юзера"""
         return self.request.user
 
 
 class CustomUserProfileUpdateView(LoginRequiredMixin, UpdateView):
+    """Класс для обновления профиля юзера"""
     model = CustomUser
     form_class = CustomUserProfileForm
     success_url = reverse_lazy("users:profile")
     template_name = "users/profile_update.html"
 
     def get_object(self, queryset=None):
+        """Метод возвращает определенного юзера"""
         return self.request.user

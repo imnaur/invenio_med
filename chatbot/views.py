@@ -4,6 +4,7 @@ from openai import OpenAI
 
 
 def chatbot_view(request):
+    """Функция позволяет научить чат бот общаться с пациентами"""
     if request.method == "POST":
         user_message = request.POST.get("message")
         client = OpenAI(api_key=settings.OPENAI_API_KEY)

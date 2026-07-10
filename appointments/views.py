@@ -55,6 +55,7 @@ class AppointmentListView(LoginRequiredMixin, ListView):
     paginate_by = 6
 
     def get_queryset(self):
+        """Метод возвращает все записи для админов и докторов, и личные для пациентов"""
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return Appointment.objects.all()
@@ -70,7 +71,7 @@ class AppointmentDetailView(LoginRequiredMixin, DetailView):
     context_object_name = "appointment"
 
     def get_queryset(self):
-        """"""
+        """Метод возвращает все записи для админов и докторов, и личные для пациентов"""
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return Appointment.objects.all()
@@ -78,12 +79,14 @@ class AppointmentDetailView(LoginRequiredMixin, DetailView):
         return appointments
 
     def get_context_data(self, **kwargs):
+        """Метод выводит слаг контактов"""
         context = super().get_context_data(**kwargs)
         context["page_slug"] = "contacts"
         return context
 
 
 class AppointmentUpdateView(PermissionRequiredMixin, UpdateView):
+    """Класс по обновлению записи"""
     model = Appointment
     template_name = "appointments/appointment_update.html"
     context_object_name = "appointment"
@@ -92,6 +95,7 @@ class AppointmentUpdateView(PermissionRequiredMixin, UpdateView):
     permission_required = "appointments.change_appointment"
 
     def get_context_data(self, **kwargs):
+        """Метод выводит имя и фамилию пациента"""
         context = super().get_context_data(**kwargs)
         context["first_name"] = self.object.patient.first_name
         context["last_name"] = self.object.patient.last_name
@@ -99,6 +103,7 @@ class AppointmentUpdateView(PermissionRequiredMixin, UpdateView):
 
 
 class AppointmentDeleteView(PermissionRequiredMixin, DeleteView):
+    """Класс для удаления записи"""
     model = Appointment
     template_name = "appointments/appointment_confirm_delete.html"
     context_object_name = "appointment"
@@ -106,6 +111,7 @@ class AppointmentDeleteView(PermissionRequiredMixin, DeleteView):
     permission_required = "appointments.delete_appointment"
 
     def get_context_data(self, **kwargs):
+        """"Метод выводит имя услуги"""
         context = super().get_context_data(**kwargs)
         context["service_name"] = self.object.service.name
         return context

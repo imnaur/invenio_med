@@ -12,11 +12,13 @@ load_dotenv(override=True)
 
 
 class StaticPageView(DetailView):
+    """Класс для вывода общей информации в главных страницах"""
     model = StaticPage
     context_object_name = "page"
     slug_url_kwarg = "page_slug"
 
     def get_template_names(self):
+        """Метод выводит по слагу соответствующую страницу"""
         if self.object.slug == "contacts":
             return ["pages/contacts.html"]
         elif self.object.slug == "about":
@@ -25,6 +27,7 @@ class StaticPageView(DetailView):
             return ["pages/homepage.html"]
 
     def post(self, request, *args, **kwargs):
+        """Метод POST для отправки админам оповещаний об очередной записи"""
         self.object = self.get_object()
         if self.object.slug == "contacts":
             email = request.POST.get("email")
@@ -49,9 +52,11 @@ class StaticPageView(DetailView):
 
 
 class HomeTemplateView(TemplateView):
+    """Класс для рендеринга главной страницы"""
     template_name = "pages/homepage.html"
 
     def get_context_data(self, **kwargs):
+        """Метод выводит последние блоги"""
         context = super().get_context_data(**kwargs)
         context["blogs"] = Blog.objects.all()[:3]
         return context
