@@ -1,8 +1,12 @@
 from django.urls import path
 
-from catalog.views import (ServiceCreateView, ServiceDeleteView,
-                           ServiceDetailView, ServiceListView,
-                           ServiceUpdateView)
+from catalog.views import (
+    ServiceCreateView,
+    ServiceDeleteView,
+    ServiceDetailView,
+    ServiceListView,
+    ServiceUpdateView,
+)
 
 app_name = "catalog"
 

@@ -1,9 +1,13 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import (LoginRequiredMixin,
-                                        PermissionRequiredMixin)
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
-from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
-                                  UpdateView)
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    DetailView,
+    ListView,
+    UpdateView,
+)
 
 from users.models import CustomUser
 
@@ -44,6 +48,7 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
 
 class AppointmentListView(LoginRequiredMixin, ListView):
     """Класс выводит все записи"""
+
     model = Appointment
     template_name = "appointments/appointment_list.html"
     context_object_name = "appointments"
@@ -59,6 +64,7 @@ class AppointmentListView(LoginRequiredMixin, ListView):
 
 class AppointmentDetailView(LoginRequiredMixin, DetailView):
     """Класс о деталях определенной записи"""
+
     model = Appointment
     template_name = "appointments/appointment_detail.html"
     context_object_name = "appointment"

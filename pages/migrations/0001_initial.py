@@ -3,6 +3,7 @@
 from django.db import migrations, models
 from typing import Any
 
+
 class Migration(migrations.Migration):
 
     initial = True
