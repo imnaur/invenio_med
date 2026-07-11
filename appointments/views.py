@@ -1,20 +1,15 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import (LoginRequiredMixin,
+                                        PermissionRequiredMixin)
 from django.urls import reverse_lazy
-from django.views.generic import (
-    CreateView,
-    DeleteView,
-    DetailView,
-    ListView,
-    UpdateView,
-)
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
 
 from users.models import CustomUser
 
 from .forms import AppointmentForm, DiagnosticResultForm
 from .models import Appointment, DiagnosticResult
 from .tasks import send_appointment_email_task
-
 
 # ----------------------------------Appointment------------------------------------------
 
@@ -44,7 +39,9 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
             appointment_date_str=appointment.date.strftime("%d.%m.%Y в %H:%M"),
         )
 
-        messages.success(self.request, "Запись создана! Администратор скоро с Вами свяжется.")
+        messages.success(
+            self.request, "Запись создана! Администратор скоро с Вами свяжется."
+        )
         return response
 
 
@@ -89,6 +86,7 @@ class AppointmentDetailView(LoginRequiredMixin, DetailView):
 
 class AppointmentUpdateView(PermissionRequiredMixin, UpdateView):
     """Класс по обновлению записи"""
+
     model = Appointment
     template_name = "appointments/appointment_update.html"
     context_object_name = "appointment"
@@ -106,6 +104,7 @@ class AppointmentUpdateView(PermissionRequiredMixin, UpdateView):
 
 class AppointmentDeleteView(PermissionRequiredMixin, DeleteView):
     """Класс для удаления записи"""
+
     model = Appointment
     template_name = "appointments/appointment_confirm_delete.html"
     context_object_name = "appointment"
@@ -113,7 +112,7 @@ class AppointmentDeleteView(PermissionRequiredMixin, DeleteView):
     permission_required = "appointments.delete_appointment"
 
     def get_context_data(self, **kwargs):
-        """"Метод выводит имя услуги"""
+        """ "Метод выводит имя услуги"""
         context = super().get_context_data(**kwargs)
         context["service_name"] = self.object.service.name
         return context
@@ -155,7 +154,9 @@ class DiagnosticResultDetailView(LoginRequiredMixin, DetailView):
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return DiagnosticResult.objects.all()
-        results = DiagnosticResult.objects.filter(appointment__patient=self.request.user)
+        results = DiagnosticResult.objects.filter(
+            appointment__patient=self.request.user
+        )
         return results
 
 
@@ -172,7 +173,9 @@ class DiagnosticResultUpdateView(PermissionRequiredMixin, UpdateView):
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return DiagnosticResult.objects.all()
-        results = DiagnosticResult.objects.filter(appointment__patient=self.request.user)
+        results = DiagnosticResult.objects.filter(
+            appointment__patient=self.request.user
+        )
         return results
 
 
@@ -193,5 +196,7 @@ class DiagnosticResultDeleteView(PermissionRequiredMixin, DeleteView):
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return DiagnosticResult.objects.all()
-        results = DiagnosticResult.objects.filter(appointment__patient=self.request.user)
+        results = DiagnosticResult.objects.filter(
+            appointment__patient=self.request.user
+        )
         return results

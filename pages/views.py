@@ -13,6 +13,7 @@ load_dotenv(override=True)
 
 class StaticPageView(DetailView):
     """Класс для вывода общей информации в главных страницах"""
+
     model = StaticPage
     context_object_name = "page"
     slug_url_kwarg = "page_slug"
@@ -53,6 +54,7 @@ class StaticPageView(DetailView):
 
 class HomeTemplateView(TemplateView):
     """Класс для рендеринга главной страницы"""
+
     template_name = "pages/homepage.html"
 
     def get_context_data(self, **kwargs):

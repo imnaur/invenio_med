@@ -6,16 +6,14 @@ from django.core.mail import send_mail
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DetailView, UpdateView
 
-from .forms import (
-    CustomUserAuthenticationForm,
-    CustomUserCreationForm,
-    CustomUserProfileForm,
-)
+from .forms import (CustomUserAuthenticationForm, CustomUserCreationForm,
+                    CustomUserProfileForm)
 from .models import CustomUser
 
 
 class RegisterView(CreateView):
     """Класс для регистрации юзеров"""
+
     form_class = CustomUserCreationForm
     template_name = "users/register.html"
     success_url = reverse_lazy("pages:home")
@@ -42,6 +40,7 @@ class RegisterView(CreateView):
 
 class CustomLoginView(LoginView):
     """Класс для Log IN"""
+
     form_class = CustomUserAuthenticationForm
     template_name = "users/login.html"
     success_url = reverse_lazy("pages:home")
@@ -52,6 +51,7 @@ class CustomLoginView(LoginView):
 
 class CustomUserProfileView(LoginRequiredMixin, DetailView):
     """Класс для профиля юзера"""
+
     model = CustomUser
     template_name = "users/profile.html"
 
@@ -62,6 +62,7 @@ class CustomUserProfileView(LoginRequiredMixin, DetailView):
 
 class CustomUserProfileUpdateView(LoginRequiredMixin, UpdateView):
     """Класс для обновления профиля юзера"""
+
     model = CustomUser
     form_class = CustomUserProfileForm
     success_url = reverse_lazy("users:profile")

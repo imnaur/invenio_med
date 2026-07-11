@@ -1,12 +1,7 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.urls import reverse_lazy
-from django.views.generic import (
-    CreateView,
-    DeleteView,
-    DetailView,
-    ListView,
-    UpdateView,
-)
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
 
 from .forms import BlogFormView
 from .models import Blog
@@ -14,6 +9,7 @@ from .models import Blog
 
 class BlogCreateView(PermissionRequiredMixin, CreateView):
     """Класс для создания блога"""
+
     model = Blog
     template_name = "blog/blog_create.html"
     form_class = BlogFormView
@@ -24,6 +20,7 @@ class BlogCreateView(PermissionRequiredMixin, CreateView):
 
 class BlogListView(ListView):
     """Класс списка блога"""
+
     model = Blog
     template_name = "blog/blog_list.html"
     paginate_by = 6
@@ -33,6 +30,7 @@ class BlogListView(ListView):
 
 class BlogDetailView(DetailView):
     """Класс для детали блога"""
+
     model = Blog
     template_name = "blog/blog_detail.html"
     context_object_name = "blog"
@@ -41,6 +39,7 @@ class BlogDetailView(DetailView):
 
 class BlogUpdateView(PermissionRequiredMixin, UpdateView):
     """Класс для обновления блога"""
+
     model = Blog
     template_name = "blog/blog_update.html"
     form_class = BlogFormView
@@ -51,6 +50,7 @@ class BlogUpdateView(PermissionRequiredMixin, UpdateView):
 
 class BlogDeleteView(PermissionRequiredMixin, DeleteView):
     """Класс для удаления блога"""
+
     model = Blog
     template_name = "blog/blog_confirm_delete.html"
     context_object_name = "blog"

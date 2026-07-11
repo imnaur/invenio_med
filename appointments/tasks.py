@@ -27,6 +27,7 @@ def send_appointment_email_task(
         fail_silently=False,
     )
 
+
 @shared_task
 def check_upcoming_appointments():
     tomorrow = timezone.now() + timedelta(days=1)
