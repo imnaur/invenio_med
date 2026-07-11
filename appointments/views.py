@@ -15,6 +15,7 @@ from .forms import AppointmentForm, DiagnosticResultForm
 from .models import Appointment, DiagnosticResult
 from .tasks import send_appointment_email_task
 
+
 # ----------------------------------Appointment------------------------------------------
 
 
@@ -148,6 +149,14 @@ class DiagnosticResultDetailView(LoginRequiredMixin, DetailView):
     template_name = "appointments/result_detail.html"
     context_object_name = "result"
 
+    def get_queryset(self):
+        """Метод возвращает результаты для админов и докторов, и личные для пациентов"""
+        user: CustomUser = self.request.user
+        if user.is_superuser or user.is_doctor or user.is_staff:
+            return DiagnosticResult.objects.all()
+        results = DiagnosticResult.objects.filter(patient=self.request.user)
+        return results
+
 
 class DiagnosticResultUpdateView(PermissionRequiredMixin, UpdateView):
     model = DiagnosticResult
@@ -155,7 +164,15 @@ class DiagnosticResultUpdateView(PermissionRequiredMixin, UpdateView):
     context_object_name = "result"
     form_class = DiagnosticResultForm
     success_url = reverse_lazy("appointments:result_list")
-    permission_required = "diagnosticresult.change_diagnosticresult"
+    permission_required = "appointments.change_diagnosticresult"
+
+    def get_queryset(self):
+        """Метод возвращает результаты для админов и докторов, и личные для пациентов"""
+        user: CustomUser = self.request.user
+        if user.is_superuser or user.is_doctor or user.is_staff:
+            return DiagnosticResult.objects.all()
+        results = DiagnosticResult.objects.filter(patient=self.request.user)
+        return results
 
 
 class DiagnosticResultDeleteView(PermissionRequiredMixin, DeleteView):
@@ -163,9 +180,17 @@ class DiagnosticResultDeleteView(PermissionRequiredMixin, DeleteView):
     template_name = "appointments/result_confirm_delete.html"
     context_object_name = "result"
     success_url = reverse_lazy("appointments:result_list")
-    permission_required = "diagnosticresult.delete_diagnosticresult"
+    permission_required = "appointments.delete_diagnosticresult"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["service_name"] = self.object.appointment.service.name
         return context
+
+    def get_queryset(self):
+        """Метод возвращает результаты для админов и докторов, и личные для пациентов"""
+        user: CustomUser = self.request.user
+        if user.is_superuser or user.is_doctor or user.is_staff:
+            return DiagnosticResult.objects.all()
+        results = DiagnosticResult.objects.filter(patient=self.request.user)
+        return results
