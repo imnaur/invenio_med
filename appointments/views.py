@@ -29,21 +29,22 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("appointments:appointment_list")
 
     def form_valid(self, form):
-        """Метод привязывает запись к пациенту и отправляет письмо на почту"""
+        """Метод отправляет письмо подтверждения на почту админам"""
         form.instance.patient = self.request.user
         form.instance.status = "created"
         response = super().form_valid(form)
-        appointment_date = form.instance.date
+
+        appointment = form.instance
         user = self.request.user
 
         send_appointment_email_task.delay(
             patient_name=f"{user.first_name} {user.last_name}",
             patient_email=user.email,
             patient_phone=str(user.phone_number),
-            appointment_date_str=appointment_date.strftime("%d.%m.%Y в %H:%M"),
+            appointment_date_str=appointment.date.strftime("%d.%m.%Y в %H:%M"),
         )
 
-        messages.success(self.request, "Запись создана! Ожидайте подтверждения.")
+        messages.success(self.request, "Запись создана! Администратор скоро с Вами свяжется.")
         return response
 
 
@@ -154,7 +155,7 @@ class DiagnosticResultDetailView(LoginRequiredMixin, DetailView):
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return DiagnosticResult.objects.all()
-        results = DiagnosticResult.objects.filter(patient=self.request.user)
+        results = DiagnosticResult.objects.filter(appointment__patient=self.request.user)
         return results
 
 
@@ -171,7 +172,7 @@ class DiagnosticResultUpdateView(PermissionRequiredMixin, UpdateView):
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return DiagnosticResult.objects.all()
-        results = DiagnosticResult.objects.filter(patient=self.request.user)
+        results = DiagnosticResult.objects.filter(appointment__patient=self.request.user)
         return results
 
 
@@ -192,5 +193,5 @@ class DiagnosticResultDeleteView(PermissionRequiredMixin, DeleteView):
         user: CustomUser = self.request.user
         if user.is_superuser or user.is_doctor or user.is_staff:
             return DiagnosticResult.objects.all()
-        results = DiagnosticResult.objects.filter(patient=self.request.user)
+        results = DiagnosticResult.objects.filter(appointment__patient=self.request.user)
         return results

@@ -27,15 +27,15 @@ def send_appointment_email_task(
         fail_silently=False,
     )
 
-    @shared_task
-    def check_upcoming_appointments():
-        tomorrow = timezone.now() + timedelta(days=1)
-        upcoming = Appointment.objects.filter(date__date=tomorrow.date())
+@shared_task
+def check_upcoming_appointments():
+    tomorrow = timezone.now() + timedelta(days=1)
+    upcoming = Appointment.objects.filter(date__date=tomorrow.date())
 
-        for app in upcoming:
-            send_appointment_email_task.delay(
-                patient_name=f"{app.patient.first_name} {app.patient.last_name}",
-                patient_email=app.patient.email,
-                patient_phone=str(app.patient.phone_number),
-                appointment_date_str=app.date.strftime("%d.%m.%Y в %H:%M"),
-            )
+    for app in upcoming:
+        send_appointment_email_task.delay(
+            patient_name=f"{app.patient.first_name} {app.patient.last_name}",
+            patient_email=app.patient.email,
+            patient_phone=str(app.patient.phone_number),
+            appointment_date_str=app.date.strftime("%d.%m.%Y в %H:%M"),
+        )
