@@ -1,113 +1,113 @@
 # invenioMED
 
-**invenioMED**— это мощная и безопасная платформа для управления клиникой и ее записями, разработанная на Django.
-Система
-автоматизирует
-запись пациентов, управление каталогом услуг, ведение блога и фиксацию результатов диагностики.
+**invenioMED** is a powerful and secure platform for managing a clinic and its records, built on Django.
+The system
+automates
+patient scheduling, service catalog management, blog maintenance, and the recording of diagnostic results.
 
-**🚀 Основные возможности**
-Управление каталогом: Удобная работа с услугами клиники.
+**🚀 Key Features**
+Service Catalog Management: Convenient management of clinic services.
 
-Умная запись: Процесс записи на прием с автоматическим уведомлением администратора.
+Smart Appointment Scheduling: An appointment scheduling process with automatic notifications to the administrator.
 
-InvenioBot: Встроенный ИИ-помощник (на базе LLM), предоставляющий справочную информацию. Важно: бот не дает медицинских
-назначений и не ставит диагнозы.
+InvenioBot: A built-in AI assistant (based on LLM) that provides reference information. Important: The bot does not issue medical
+prescriptions or make diagnoses.
 
-Мультиязычность: Поддержка русского и английского языков с возможностью переключения в один клик.
+Multilingual Support: Support for Russian and English with one-click language switching.
 
-Фоновая обработка: Использование Celery и Celery Beat для отправки email-уведомлений и выполнения регулярных задач без
-нагрузки на основной интерфейс.
+Background Processing: Uses Celery and Celery Beat to send email notifications and perform regular tasks without
+overloading the main interface.
 
-Диагностика: Ведение базы медицинских результатов и анализов.
+Diagnostics: Maintenance of a database of medical results and test reports.
 
-Блог: Внутренняя система публикаций для пациентов и персонала.
+Blog: An internal publishing system for patients and staff.
 
-Безопасность: Разграничение прав доступа на основе ролей пользователей.
+Security: Access rights managed based on user roles.
 
-**🎨 Дизайн и интерфейс**
-Интерфейс системы реализован с использованием Bootstrap 5, что обеспечивает:
+**🎨 Design and Interface**
+The system interface is built using Bootstrap 5, which ensures:
 
-Полную адаптивность (сайт корректно отображается на смартфонах, планшетах и ПК).
+Full responsiveness (the site displays correctly on smartphones, tablets, and PCs).
 
-Современный вид форм, таблиц и навигационных панелей, а также привлекательный вид
+A modern look for forms, tables, and navigation panels, as well as an attractive design
 
-Быструю загрузку компонентов интерфейса
+Fast loading of interface components
 
-**🛠 Технологический стек**
+**🛠 Technology Stack**
 
 Backend: Django 6.0, Python >=3.12,<3.15
 
 Task Queue: Celery + Redis
 
-AI: Интеграция с LLM API для работы InvenioBot
+AI: Integration with the LLM API for InvenioBot
 
 Internationalization: Django i18n
 
-Frontend: Bootstrap 5 (адаптивная вёрстка)
+Frontend: Bootstrap 5 (responsive layout)
 
-**База данных:**
-PostgresSQL (для разработки) / PostgreSQL (рекомендуется для продакшн)
+**Database:**
+PostgreSQL (for development) / PostgreSQL (recommended for production)
 
-**Тестирование:**
+**Testing:**
 unittest + coverage
-Проект покрыт unit-тестами для обеспечения безопасности доступа к данным.
+The project is covered by unit tests to ensure secure data access.
 
-**Стиль:**
+**Style:**
 HTML5, CSS3
 
 🤖 InvenioBot
-Наш встроенный ассистент помогает пользователям находить ответы на общие вопросы о работе клиники.
+Our built-in assistant helps users find answers to common questions about the clinic’s operations.
 
-Дисклеймер: ИИ-помощник носит исключительно информационный характер. 
+Disclaimer: The AI assistant is for informational purposes only. 
 
-🌍 Локализация
-Сайт полностью переведен на два языка. Переключатель языка доступен в навигационной панели сайта.
+🌍 Localization
+The website is fully translated into two languages. The language switcher is available in the site’s navigation bar.
 
-🛠 Установка и запуск
-Для запуска проекта убедитесь, что у вас установлен Redis (брокер сообщений).
+🛠 Installation and Setup
+To run the project, make sure you have Redis (a message broker) installed.
 
-Клонируйте репозиторий:
+Clone the repository:
 
 Bash
 git clone https://github.com/imnaur/invenio_med.git
 cd invenio_med
-Установите зависимости (через Poetry):
+Install dependencies (via Poetry):
 
 Bash
 poetry install
-Примените миграции:
+Apply migrations:
 
 Bash
 poetry run python manage.py migrate
-⚙️ Запуск процессов
-Для полноценной работы проекта необходимо запустить процессы в трех терминалах:
+⚙️ Starting processes
+For the project to function properly, you need to start processes in three terminals:
 
-Сервер Django:
+Django server:
 
 Bash
 poetry run python manage.py runserver
-Celery Worker (обработка задач):
+Celery Worker (task processing):
 
 Bash
 poetry run celery -A config worker --loglevel=info
-Celery Beat (планировщик):
+Celery Beat (scheduler):
 
 Bash
 poetry run celery -A config beat --loglevel=info
-🔐 Разграничение прав доступа
-Система использует PermissionRequiredMixin для защиты критических данных:
+🔐 Access Control
+The system uses PermissionRequiredMixin to protect critical data:
 
-Администраторы: полный доступ ко всем модулям.
+Administrators: full access to all modules.
 
-Врачи: доступ к записям и результатам диагностики.
+Doctors: access to patient records and diagnostic results.
 
-Пациенты: доступ к личному кабинету, просмотр своей информации и чат-бот.
+Patients: access to their personal account, viewing their information, and the chatbot.
 
-🧪 Тестирование
+🧪 Testing
 Bash
-# Запуск всех тестов
+# Run all tests
 poetry run python manage.py test
 
-# Проверка покрытия кода
+# Check code coverage
 poetry run coverage run manage.py test
 poetry run coverage report
